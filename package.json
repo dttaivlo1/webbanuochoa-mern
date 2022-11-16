@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "MERN Ecommerce",
   "main": "server/index.js",
-  
+  "engines": {
+    "node": "18.12.1"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode production  --config webpack/webpack.prod.js",
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server  --config webpack/webpack.dev.js",
     "dev:server": "nodemon",
     "dev": "npm-run-all --parallel dev:*",
-    "start": "npm run dev:client",
+    "start": "cross-env NODE_ENV=production node server/index.js",
     "heroku-postbuild": "npm run build",
     "postinstall": "npm run build",
     "seed:db": "node server/utils/seed.js",
