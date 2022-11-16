@@ -1,0 +1,36 @@
+{
+  "ROLE_ADMIN": [
+    { "to": "", "name": "Thông tin tài khoản", "prefix": "/dashboard" },
+    { "to": "/security", "name": "Bảo mật", "prefix": "/dashboard" },
+    { "to": "/address", "name": "Địa chỉ", "prefix": "/dashboard" },
+    { "to": "/product", "name": "Quản lý sản phẩm", "prefix": "/dashboard" },
+    { "to": "/category", "name": "QL Danh mục", "prefix": "/dashboard" },
+    { "to": "/brand", "name": "Nhãn hàng", "prefix": "/dashboard" },
+    { "to": "/users", "name": "Quản lý người dùng", "prefix": "/dashboard" },
+   
+    { "to": "/orders", "name": "Quản lý đơn hàng", "prefix": "/dashboard" },
+    { "to": "/review", "name": "Quản lý đánh giá", "prefix": "/dashboard" },
+    { "to": "/wishlist", "name": "WishList", "prefix": "/dashboard" },
+    { "to": "/support", "name": "Thông tin hỗ trợ" },
+    { "to": "/report", "name": "Báo cáo thống kê" },
+    { "to": "/support", "name": "Thanh toán online" }
+  ],
+  "ROLE_MERCHANT": [
+    { "to": "", "name": "Account Details", "prefix": "/dashboard" },
+    { "to": "/security", "name": "Account Security", "prefix": "/dashboard" },
+    { "to": "/address", "name": "Address", "prefix": "/dashboard" },
+    { "to": "/brand", "name": "Brand", "prefix": "/dashboard" },
+    { "to": "/product", "name": "Products", "prefix": "/dashboard" },
+    { "to": "/orders", "name": "Orders", "prefix": "/dashboard" },
+    { "to": "/wishlist", "name": "WishList", "prefix": "/dashboard" },
+    { "to": "/support", "name": "Support" }
+  ],
+  "ROLE_MEMBER": [
+    { "to": "", "name": "Thông tin tài khoản", "prefix": "/dashboard" },
+    { "to": "/security", "name": "Bảo mật", "prefix": "/dashboard" },
+    { "to": "/address", "name": "Địa chỉ", "prefix": "/dashboard" },
+    { "to": "/orders", "name": "Đơn hàng của tôi", "prefix": "/dashboard" },
+    { "to": "/wishlist", "name": "WishList", "prefix": "/dashboard" },
+    { "to": "/support", "name": "Hỗ trợ" }
+  ]
+}
