@@ -5,7 +5,7 @@
  */
 
  import React, { useCallback, useMemo, useRef, useState } from 'react';
-import { AgGridReact } from 'ag-grid-react';
+
 import { formatDate } from '../../../utils/date';
 import UserRole from '../UserRole';
 import './style.css';
@@ -75,16 +75,6 @@ const UserList = props => {
           </p>
         </div>
       ))}
-      <div style={containerStyle}>
-      <div style={gridStyle} className="ag-theme-alpine">
-        <AgGridReact
-          rowData={rowData}
-          columnDefs={columnDefs}
-          defaultColDef={defaultColDef}
-          onGridReady={onGridReady}
-        ></AgGridReact>
-      </div>
-    </div>
     </div>
   );
 };
