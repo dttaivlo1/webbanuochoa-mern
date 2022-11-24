@@ -110,7 +110,7 @@ class ProductPage extends React.PureComponent {
                       {product.brand && (
                         <p className='by'>
                           Xem thêm các sản phẩm của{' '}
-                          <Link
+                          <Link 
                             to={`/shop/brand/${product.brand.slug}`}
                             className='default-link'
                           >
@@ -119,7 +119,7 @@ class ProductPage extends React.PureComponent {
                         </p>
                       )}
                       <p className='item-desc'>{product.description}</p>
-                      <p className='price'>${product.price}</p>
+                      <p className='price'>{product.price} VNĐ</p>
                     </div>
                     <div className='item-customize'>
                       <Input
