@@ -285,7 +285,7 @@ export const addProduct = () => {
           'Mô tả không được quá 500 kí tự.',
         'required.quantity': 'Vui lòng nhập hàng tồn kho ban đầu',
         'required.price': 'Giá không được bỏ trống',
-        'required.taxable': 'Taxable is required.',
+        
         'required.brand': 'Nhãn hiệu  không được bỏ trống',
         'required.image': 'Vui lòng nhập ảnh có định dạng jpg, jpeg, png.'
    

@@ -137,32 +137,8 @@ const AddProduct = props => {
               }}
             />
            </Row>
-           <Row xs='12' md ='2'>
-           <Input
-              type={'file'}
-              error={formErrors['file']}
-              name={'image'}
-              label={'file'}
-              placeholder={'Hình ảnh'}
-              value={image}
-              onInputChange={(name, value) => {
-                productChange(name, value);
-              }}
-            />
-           </Row>
-           <Row xs='12' md ='2'>
-           <Input
-              type={'file'}
-              error={formErrors['file']}
-              name={'image'}
-              label={'file'}
-              placeholder={'Hình ảnh'}
-              value={image}
-              onInputChange={(name, value) => {
-                productChange(name, value);
-              }}
-            />
-           </Row>
+           
+          
             
           </Col>
           <Col xs='12' md='12' className='my-2'>
