@@ -78,7 +78,7 @@ const ReviewList = props => {
                     {review?.product.name}
                   </Link>
                 ) : (
-                  <p>Sản phẩm không khả dụng.</p>
+                  <p>Product is not available.</p>
                 )}
 
                 <ReactStars
@@ -105,7 +105,7 @@ const ReviewList = props => {
               <div className='d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mx-0'>
                 <div className='d-flex flex-row mx-0'>
                   <CheckIcon className='text-green' />
-                  <p className='ml-2 mb-0'>Nộp đánh giá</p>
+                  <p className='ml-2 mb-0'>Approved</p>
                 </div>
                 <Button
                   className='mt-3 mt-lg-0'
@@ -118,7 +118,7 @@ const ReviewList = props => {
               <>
                 <div className='d-flex align-items-center mb-3'>
                   <RefreshIcon className='text-primary' />
-                  <p className='fw-medium ml-3 mb-0'>Nộp lại đánh giá</p>
+                  <p className='fw-medium ml-3 mb-0'>Re Approve Review</p>
                 </div>
                 <div className='d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mx-0'>
                   <Button

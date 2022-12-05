@@ -42,8 +42,8 @@ export const handleAddToCart = product => {
     };
 
     const { isValid, errors } = allFieldsValidation(product, rules, {
-      'min.quantity': 'Số lượng phải lớn hơn 0.',
-      'max.quantity': `Số lượng phả nhot hơn ${result}.`
+      'min.quantity': 'Quantity must be at least 1.',
+      'max.quantity': `Quantity may not be greater than ${result}.`
     });
 
     if (!isValid) {

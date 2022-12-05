@@ -260,7 +260,6 @@ router.post(
   upload.single('image'),
   async (req, res) => {
     try {
-      console.log(req.body);
       const sku = req.body.sku;
       const name = req.body.name;
       const description = req.body.description;
@@ -303,7 +302,7 @@ router.post(
         description,
         quantity,
         price,
-        
+        taxable,
         isActive,
         brand,
         imageUrl,
@@ -318,9 +317,9 @@ router.post(
         product: savedProduct
       });
     } catch (error) {
-      console.error(error);
+      console.log(error);
       return res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Lỗi thêm sản phẩm'
       });
     }
   }

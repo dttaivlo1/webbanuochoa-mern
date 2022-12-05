@@ -29,12 +29,12 @@ const AddressList = props => {
               {address.isDefault ? (
                 <div className='d-flex align-items-center justify-content-between mb-2'>
                   <h4 className='mb-0 mr-2 one-line-ellipsis'>
-                    Địa chỉ giao hàng mặc định
+                    Default Delivery Address
                   </h4>
                   <CheckIcon className='text-green' />
                 </div>
               ) : (
-                <h4 className='mb-0'>Địa chỉ giao hàng</h4>
+                <h4 className='mb-0'>Delivery Address</h4>
               )}
               <p className='mb-2 address-desc'>
                 {`${address?.address} ${address?.city}, ${address?.country}, ${address?.zipCode}`}

@@ -25,14 +25,14 @@ class Newsletter extends React.PureComponent {
 
     return (
       <div className='newsletter-form'>
-        <p>Đăng kí nhận tin miễn phí</p>
+        <p>Sign Up for Our Newsletter</p>
         <form onSubmit={handleSubmit}>
           <div className='subscribe'>
             <Input
               type={'text'}
               error={formErrors['email']}
               name={'email'}
-              placeholder={'sieusalesapsan@gmail.muoitieu'}
+              placeholder={'Please Enter Your Email'}
               value={email}
               onInputChange={(name, value) => {
                 newsletterChange(name, value);

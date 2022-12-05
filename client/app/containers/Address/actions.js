@@ -103,8 +103,8 @@ export const addAddress = () => {
       const isDefault = getState().address.isDefault;
 
       const { isValid, errors } = allFieldsValidation(newAddress, rules, {
-        'required.address': 'Vui lòng nhập địa chỉ.',
-        'required.city': 'Vui long nhập TỈnh/Thành phố',
+        'required.address': 'Address is required.',
+        'required.city': 'City is required.',
         'required.state': 'State is required.',
         'required.country': 'Country is required.',
         'required.zipCode': 'Zipcode is required.'

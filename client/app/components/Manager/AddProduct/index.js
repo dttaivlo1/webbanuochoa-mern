@@ -42,9 +42,9 @@ const AddProduct = props => {
             <Input
               type={'text'}
               error={formErrors['sku']}
-              label={'MÃ SP'}
+              label={'Sku'}
               name={'sku'}
-              placeholder={'sanpham001'}
+              placeholder={'Product Sku'}
               value={productFormData.sku}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -55,9 +55,9 @@ const AddProduct = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Tên'}
+              label={'Name'}
               name={'name'}
-              placeholder={'Tên SP'}
+              placeholder={'Product Name'}
               value={productFormData.name}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -68,9 +68,9 @@ const AddProduct = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Mô tả'}
+              label={'Description'}
               name={'description'}
-              placeholder={'nhập vô mô tả'}
+              placeholder={'Product Description'}
               value={productFormData.description}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -81,10 +81,10 @@ const AddProduct = props => {
             <Input
               type={'number'}
               error={formErrors['quantity']}
-              label={'Số lượng'}
+              label={'Quantity'}
               name={'quantity'}
               decimals={false}
-              placeholder={'nhập đại số gì đi'}
+              placeholder={'Product Quantity'}
               value={productFormData.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -98,20 +98,31 @@ const AddProduct = props => {
               label={'Price'}
               name={'price'}
               min={1}
-              placeholder={'Giá SP'}
+              placeholder={'Product Price'}
               value={productFormData.price}
               onInputChange={(name, value) => {
                 productChange(name, value);
               }}
             />
           </Col>
-          
+          <Col xs='12' md='12'>
+            <SelectOption
+              error={formErrors['taxable']}
+              label={'Taxable'}
+              name={'taxable'}
+              options={taxableSelect}
+              value={productFormData.taxable}
+              handleSelectChange={value => {
+                productChange('taxable', value);
+              }}
+            />
+          </Col>
           <Col xs='12' md='12'>
             <SelectOption
               disabled={user.role === 'ROLE_MERCHANT'}
               error={formErrors['brand']}
               name={'brand'}
-              label={'Nhãn hiệu'}
+              label={'Select Brand'}
               value={
                 user.role === 'ROLE_MERCHANT'
                   ? brands[1]
@@ -124,28 +135,23 @@ const AddProduct = props => {
             />
           </Col>
           <Col xs='12' md='12'>
-           <Row xs='12' md ='2'>
-           <Input
+            <Input
               type={'file'}
               error={formErrors['file']}
               name={'image'}
               label={'file'}
-              placeholder={'Hình ảnh'}
+              placeholder={'Please Upload Image'}
               value={image}
               onInputChange={(name, value) => {
                 productChange(name, value);
               }}
             />
-           </Row>
-           
-          
-            
           </Col>
           <Col xs='12' md='12' className='my-2'>
             <Switch
               id={'active-product'}
               name={'isActive'}
-              label={'Khả dụng'}
+              label={'Active?'}
               checked={productFormData.isActive}
               toggleCheckboxChange={value => productChange('isActive', value)}
             />
@@ -153,7 +159,7 @@ const AddProduct = props => {
         </Row>
         <hr />
         <div className='add-product-actions'>
-          <Button type='submit' text='Thêm' />
+          <Button type='submit' text='Add Product' />
         </div>
       </form>
     </div>

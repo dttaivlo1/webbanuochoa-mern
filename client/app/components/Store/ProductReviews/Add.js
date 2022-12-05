@@ -28,15 +28,15 @@ const Add = props => {
   return (
     <div className='bg-white p-4 box-shadow-primary add-review'>
       <form onSubmit={handleSubmit} noValidate>
-        <h3 className='mb-3'>Thêm đánh giá</h3>
+        <h3 className='mb-3'>Add Review</h3>
         <Row>
           <Col xs='12' md='12'>
             <Input
               type={'text'}
               error={reviewFormErrors['title']}
-              label={'Tiêu đề'}
+              label={'Title'}
               name={'title'}
-              placeholder={'...'}
+              placeholder={'Enter Review title'}
               value={reviewFormData.title}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -47,9 +47,9 @@ const Add = props => {
             <Input
               type={'textarea'}
               error={reviewFormErrors['review']}
-              label={'Nội dung'}
+              label={'Comment'}
               name={'review'}
-              placeholder={'...'}
+              placeholder={'Write Review'}
               value={reviewFormData.review}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -60,7 +60,7 @@ const Add = props => {
             <Input
               type={'stars'}
               error={reviewFormErrors['rating']}
-              label={'Gắn sao'}
+              label={'Rating'}
               name={'rating'}
               value={reviewFormData.rating}
               onInputChange={(name, value) => {
@@ -71,7 +71,7 @@ const Add = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={reviewFormErrors['isRecommended']}
-              label={'Bạn sẽ giới thiệu sản phẩm này chứ?'}
+              label={'Will you recommend this product?'}
               name={'isRecommended'}
               value={reviewFormData.isRecommended}
               options={recommedableSelect}
@@ -82,7 +82,7 @@ const Add = props => {
           </Col>
         </Row>
         <div className='mt-4'>
-          <Button type='submit' text='Gửi đánh giá' />
+          <Button type='submit' text='Publish Review' />
         </div>
       </form>
     </div>

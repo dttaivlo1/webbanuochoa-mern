@@ -16,18 +16,18 @@ const CartSummary = props => {
       <Container>
         <Row className='mb-2 summary-item'>
           <Col xs='9'>
-            <p className='summary-label'>Miễn phí ship</p>
+            <p className='summary-label'>Free Shippling</p>
           </Col>
           <Col xs='3' className='text-right'>
-            <p className='summary-value'>0 VND</p>
+            <p className='summary-value'>$0</p>
           </Col>
         </Row>
         <Row className='mb-2 summary-item'>
           <Col xs='9'>
-            <p className='summary-label'>Tổng Cộng</p>
+            <p className='summary-label'>Total</p>
           </Col>
           <Col xs='3' className='text-right'>
-            <p className='summary-value'>{cartTotal} VND</p>
+            <p className='summary-value'>${cartTotal}</p>
           </Col>
         </Row>
       </Container>

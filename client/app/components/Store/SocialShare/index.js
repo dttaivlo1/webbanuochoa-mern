@@ -16,9 +16,9 @@ import {
 const SocialShare = props => {
   const { product } = props;
 
-  const shareMsg = `Tui ♥ ${
+  const shareMsg = `I ♥ ${
     product.name
-  } trên TMDTperfume!  link dẫn tới nó nè bà con, ${
+  } product on Mern Store!  Here's the link, ${
     window.location.protocol !== 'https' ? 'http' : 'https'
   }://${window.location.host}/product/${product.slug}`;
 

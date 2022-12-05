@@ -16,19 +16,19 @@ const Checkout = props => {
       <div className='checkout-actions'>
         <Button
           variant='primary'
-          text='Tiếp tục mua hàng'
+          text='Continue shopping'
           onClick={() => handleShopping()}
         />
         {authenticated ? (
           <Button
             variant='primary'
-            text='TIến hành đặt hàng'
+            text='Place Order'
             onClick={() => placeOrder()}
           />
         ) : (
           <Button
             variant='primary'
-            text='Tiến hành thanh toán'
+            text='Proceed To Checkout'
             onClick={() => handleCheckout()}
           />
         )}

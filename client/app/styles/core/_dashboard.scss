@@ -82,8 +82,8 @@
         font-weight: $font-weight-normal;
 
         &.active-link {
-          font-weight: $font-weight-medium;
-          background-color: $white;
+          font-weight: $font-weight-bold;
+          background-color: rgb(random(255), random(255), random(255));
         }
       }
     }

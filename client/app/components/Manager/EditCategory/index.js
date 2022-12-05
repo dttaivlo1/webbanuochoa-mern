@@ -33,7 +33,7 @@ const EditCategory = props => {
   return (
     <div className='edit-category'>
       <div className='d-flex flex-row mx-0 mb-3'>
-        <label className='mr-1'>Danh mục hàng hoá </label>
+        <label className='mr-1'>Category link </label>
         <Link to={`/shop/category/${category.slug}`} className='default-link'>
           {category.slug}
         </Link>
@@ -44,9 +44,9 @@ const EditCategory = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Tên'}
+              label={'Name'}
               name={'name'}
-              placeholder={'Nhập mỹ'}
+              placeholder={'Category Name'}
               value={category.name}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -57,9 +57,9 @@ const EditCategory = props => {
             <Input
               type={'text'}
               error={formErrors['slug']}
-              label={'Liên kết'}
+              label={'Slug'}
               name={'slug'}
-              placeholder={'nuoc-hoa-nhap-my'}
+              placeholder={'Category Slug'}
               value={category.slug}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -70,9 +70,9 @@ const EditCategory = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Mô tả'}
+              label={'Description'}
               name={'description'}
-              placeholder={'nước hoa như thế nào'}
+              placeholder={'Category Description'}
               value={category.description}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -82,7 +82,7 @@ const EditCategory = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['products']}
-              label={'Chọn sản phẩm'}
+              label={'Select Products'}
               multi={true}
               defaultValue={category.products}
               options={products}
@@ -98,7 +98,7 @@ const EditCategory = props => {
               tooltipContent={`Disabling ${category.name} will also disable all ${category.name} products.`}
               id={`enable-category-${category._id}`}
               name={'isActive'}
-              label={'Khả dụng?'}
+              label={'Active?'}
               checked={category.isActive}
               toggleCheckboxChange={value =>
                 activateCategory(category._id, value)
@@ -110,12 +110,12 @@ const EditCategory = props => {
         <div className='d-flex flex-column flex-md-row'>
           <Button
             type='submit'
-            text='Lưu lại'
+            text='Save'
             className='mb-3 mb-md-0 mr-0 mr-md-3'
           />
           <Button
             variant='danger'
-            text='Xoá'
+            text='Delete'
             onClick={() => deleteCategory(category._id)}
           />
         </div>

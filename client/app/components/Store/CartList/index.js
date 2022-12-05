@@ -51,7 +51,7 @@ const CartList = props => {
                   <Button
                     borderless
                     variant='empty'
-                    ariaLabel={`Xoá ${item.name} khỏi giỏ hàng`}
+                    ariaLabel={`remove ${item.name} from cart`}
                     icon={<i className='icon-trash' aria-hidden='true' />}
                     onClick={() => handleRemoveFromCart(item)}
                   />
@@ -59,7 +59,7 @@ const CartList = props => {
               </Row>
               <Row className='mb-2 align-items-center'>
                 <Col xs='9'>
-                  <p className='item-label'>Đơn giá</p>
+                  <p className='item-label'>price</p>
                 </Col>
                 <Col xs='3' className='text-right'>
                   <p className='value price'>{` $${item?.totalPrice}`}</p>
@@ -67,7 +67,7 @@ const CartList = props => {
               </Row>
               <Row className='mb-2 align-items-center'>
                 <Col xs='9'>
-                  <p className='item-label'>Số lượng</p>
+                  <p className='item-label'>quantity</p>
                 </Col>
                 <Col xs='3' className='text-right'>
                   <p className='value quantity'>{` ${item.quantity}`}</p>

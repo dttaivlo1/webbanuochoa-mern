@@ -105,7 +105,7 @@ SearchBar.defaultProps = {
   className: '',
   id: 'search',
   name: 'search',
-  placeholder: 'Search...',
+  placeholder: 'Search',
   inlineBtn: true,
   btnText: 'Search',
   autoComplete: 'off'

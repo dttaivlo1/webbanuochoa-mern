@@ -61,8 +61,8 @@ class List extends React.PureComponent {
     return (
       <div className='order-dashboard'>
         <SubPage
-          title='Đơn hàng của bạn'
-          actionTitle={user.role === ROLE_ADMIN && 'Đơn hàng của Khách hàng'}
+          title='Your Orders'
+          actionTitle={user.role === ROLE_ADMIN && 'Customer Orders'}
           handleAction={() =>
             user.role === ROLE_ADMIN &&
             history.push('/dashboard/orders/customers')
@@ -92,7 +92,7 @@ class List extends React.PureComponent {
             </>
           )}
           {!isLoading && !displayOrders && (
-            <NotFound message='Bạn chưa đặt cái gì hết, làm sao mà có đơn?' />
+            <NotFound message='you have no orders yet!' />
           )}
         </SubPage>
       </div>

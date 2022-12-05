@@ -74,7 +74,7 @@ const config = {
     disableHostCheck: false,
     historyApiFallback: true,
     proxy: {
-      '/api': 'https://localhost:3000'
+      '/api': 'http://localhost:3000'
     }
   },
   devtool: 'eval-source-map'

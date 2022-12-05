@@ -40,7 +40,10 @@ const ProductSchema = new Schema({
   price: {
     type: Number
   },
-  
+  taxable: {
+    type: Boolean,
+    default: false
+  },
   isActive: {
     type: Boolean,
     default: true

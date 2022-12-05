@@ -97,7 +97,7 @@
 }
 
 .one-line-ellipsis {
-  //display: -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -148,10 +148,8 @@
 
 // default link
 .default-link {
-  color: red !important;
+  color: $font-custom-color !important;
   font-weight: $font-weight-normal;
-  font-size: 16px;
-  font-weight: bold;
 
   &:hover {
     text-decoration: underline !important;

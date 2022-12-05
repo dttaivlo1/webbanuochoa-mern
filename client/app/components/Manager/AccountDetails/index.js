@@ -29,7 +29,7 @@ const AccountDetails = props => {
               user.email
             ) : (
               <span className='provider-email'>
-                Đã đăng nhập dưới tên: {user.provider}
+                Logged in With {user.provider}
               </span>
             )}
           </p>
@@ -63,7 +63,7 @@ const AccountDetails = props => {
             />
           </Col>
           {/* TODO: update email feature to be added instead form change */}
-           <Col xs='12' md='6'>
+          {/* <Col xs='12' md='6'>
             <Input
               type={'text'}
               label={'Email'}
@@ -74,13 +74,13 @@ const AccountDetails = props => {
                 accountChange(name, value);
               }}
             />
-          </Col> 
+          </Col> */}
           <Col xs='12' md='12'>
             <Input
               type={'text'}
               label={'Phone Number'}
               name={'phoneNumber'}
-              placeholder={'VUi lòng nhập SĐT của bạn'}
+              placeholder={'Please Enter Your Phone Number'}
               value={user.phoneNumber ? user.phoneNumber : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);

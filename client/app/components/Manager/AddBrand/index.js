@@ -28,9 +28,9 @@ const AddBrand = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Tên nhãn hàng'}
+              label={'Name'}
               name={'name'}
-              placeholder={'vd: chà neo'}
+              placeholder={'Brand Name'}
               value={brandFormData.name}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -41,9 +41,9 @@ const AddBrand = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Mô tả'}
+              label={'Description'}
               name={'description'}
-              placeholder={'chà chà neo neo'}
+              placeholder={'Brand Description'}
               value={brandFormData.description}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -54,7 +54,7 @@ const AddBrand = props => {
             <Switch
               id={'active-brand'}
               name={'isActive'}
-              label={'Khả dụng?'}
+              label={'Active?'}
               checked={brandFormData.isActive}
               toggleCheckboxChange={value => brandChange('isActive', value)}
             />
@@ -62,7 +62,7 @@ const AddBrand = props => {
         </Row>
         <hr />
         <div className='add-brand-actions'>
-          <Button type='submit' text='Thêm' />
+          <Button type='submit' text='Add Brand' />
         </div>
       </form>
     </div>

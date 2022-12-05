@@ -18,23 +18,6 @@ import NotFound from '../../components/Common/NotFound';
 import { BagIcon } from '../../components/Common/Icon';
 import ProductReviews from '../../components/Store/ProductReviews';
 import SocialShare from '../../components/Store/SocialShare';
-import ImageGallery from 'react-image-gallery';
-import './image-gallery.css';
-import './image-gallery.scss';
-const images = [
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-];
 
 class ProductPage extends React.PureComponent {
   componentDidMount() {
@@ -82,19 +65,18 @@ class ProductPage extends React.PureComponent {
             <Row className='flex-row'>
               <Col xs='12' md='5' lg='5' className='mb-3 px-3 px-md-2'>
                 <div className='position-relative'>
-                  {/* <img
+                  <img
                     className='item-image'
                     src={`${
                       product.imageUrl
                         ? product.imageUrl
                         : '/images/placeholder-image.png'
                     }`}
-                  /> */}
-                  <ImageGallery items={images} autoPlay='true' showPlayButton="false" />
+                  />
                   {product.inventory <= 0 && !shopFormErrors['quantity'] ? (
-                    <p className='stock out-of-stock'>Liên hệ</p>
+                    <p className='stock out-of-stock'>Out of stock</p>
                   ) : (
-                    <p className='stock in-stock'>Còn hàng</p>
+                    <p className='stock in-stock'>In stock</p>
                   )}
                 </div>
               </Col>
@@ -109,8 +91,8 @@ class ProductPage extends React.PureComponent {
                       <hr />
                       {product.brand && (
                         <p className='by'>
-                          Xem thêm các sản phẩm của{' '}
-                          <Link 
+                          see more from{' '}
+                          <Link
                             to={`/shop/brand/${product.brand.slug}`}
                             className='default-link'
                           >
@@ -119,13 +101,13 @@ class ProductPage extends React.PureComponent {
                         </p>
                       )}
                       <p className='item-desc'>{product.description}</p>
-                      <p className='price'>{product.price} VNĐ</p>
+                      <p className='price'>${product.price}</p>
                     </div>
                     <div className='item-customize'>
                       <Input
                         type={'number'}
                         error={shopFormErrors['quantity']}
-                        label={'Số lượng'}
+                        label={'Quantity'}
                         name={'quantity'}
                         decimals={false}
                         min={1}
@@ -151,7 +133,7 @@ class ProductPage extends React.PureComponent {
                             product.inventory <= 0 &&
                             !shopFormErrors['quantity']
                           }
-                          text='Xoá khỏi giỏ hàng'
+                          text='Remove From Bag'
                           className='bag-btn'
                           icon={<BagIcon />}
                           onClick={() => handleRemoveFromCart(product)}
@@ -162,7 +144,7 @@ class ProductPage extends React.PureComponent {
                           disabled={
                             product.quantity <= 0 && !shopFormErrors['quantity']
                           }
-                          text='Thêm vào giỏ hàng'
+                          text='Add To Bag'
                           className='bag-btn'
                           icon={<BagIcon />}
                           onClick={() => handleAddToCart(product)}
@@ -183,7 +165,7 @@ class ProductPage extends React.PureComponent {
             />
           </>
         ) : (
-          <NotFound message='Không tìm thấy sản phẩm' />
+          <NotFound message='no product found.' />
         )}
       </div>
     );

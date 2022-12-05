@@ -241,7 +241,7 @@ export const addProduct = () => {
       const rules = {
         sku: 'required|alpha_dash',
         name: 'required',
-        description: 'required|max:2000',
+        description: 'required|max:200',
         quantity: 'required|numeric',
         price: 'required|numeric',
         taxable: 'required',
@@ -273,22 +273,18 @@ export const addProduct = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules, {
-        'required.name': 'Tên SP không được bỏ trống',
         'required.sku': 'Sku is required.',
         'alpha_dash.sku':
-          'Sku có thể có các ký tự chữ và số, cũng như chỉ có dấu gạch ngang và dấu gạch dưới.',
-        'required.slug': 'liên kết không được bỏ trống',
-        'alpha_dash.slug':
-          'Slug có thể có các ký tự chữ và số, cũng như chỉ có dấu gạch ngang và dấu gạch dưới.',
-        'required.description': 'Mô tả không được bỏ trống.',
+          'Sku may have alpha-numeric characters, as well as dashes and underscores only.',
+        'required.name': 'Name is required.',
+        'required.description': 'Description is required.',
         'max.description':
-          'Mô tả không được quá 500 kí tự.',
-        'required.quantity': 'Vui lòng nhập hàng tồn kho ban đầu',
-        'required.price': 'Giá không được bỏ trống',
-        
-        'required.brand': 'Nhãn hiệu  không được bỏ trống',
-        'required.image': 'Vui lòng nhập ảnh có định dạng jpg, jpeg, png.'
-   
+          'Description may not be greater than 200 characters.',
+        'required.quantity': 'Quantity is required.',
+        'required.price': 'Price is required.',
+        'required.taxable': 'Taxable is required.',
+        'required.image': 'Please upload files with jpg, jpeg, png format.',
+        'required.brand': 'Brand is required.'
       });
 
       if (!isValid) {
@@ -340,7 +336,7 @@ export const updateProduct = () => {
         name: 'required',
         sku: 'required|alpha_dash',
         slug: 'required|alpha_dash',
-        description: 'required|max:2000',
+        description: 'required|max:200',
         quantity: 'required|numeric',
         price: 'required|numeric',
         taxable: 'required',
@@ -363,20 +359,20 @@ export const updateProduct = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules, {
-        'required.name': 'Tên SP không được bỏ trống',
+        'required.name': 'Name is required.',
         'required.sku': 'Sku is required.',
         'alpha_dash.sku':
-          'Sku có thể có các ký tự chữ và số, cũng như chỉ có dấu gạch ngang và dấu gạch dưới.',
-        'required.slug': 'liên kết không được bỏ trống',
+          'Sku may have alpha-numeric characters, as well as dashes and underscores only.',
+        'required.slug': 'Slug is required.',
         'alpha_dash.slug':
-          'Slug có thể có các ký tự chữ và số, cũng như chỉ có dấu gạch ngang và dấu gạch dưới.',
-        'required.description': 'Mô tả không được bỏ trống.',
+          'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
+        'required.description': 'Description is required.',
         'max.description':
-          'Mô tả không được quá 500 kí tự.',
-        'required.quantity': 'Vui lòng nhập hàng tồn kho ban đầu',
-        'required.price': 'Giá không được bỏ trống',
+          'Description may not be greater than 200 characters.',
+        'required.quantity': 'Quantity is required.',
+        'required.price': 'Price is required.',
         'required.taxable': 'Taxable is required.',
-        'required.brand': 'Nhãn hiệu  không được bỏ trống'
+        'required.brand': 'Brand is required.'
       });
 
       if (!isValid) {

@@ -28,9 +28,9 @@ const AddAddress = props => {
             <Input
               type={'text'}
               error={formErrors['address']}
-              label={'Địa chỉ'}
+              label={'Address'}
               name={'address'}
-              placeholder={'Địa chỉ: Số nhà, Tên Đường, quận, huyện'}
+              placeholder={'Address: Street, House No / Apartment No'}
               value={addressFormData.address}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -41,7 +41,7 @@ const AddAddress = props => {
             <Input
               type={'text'}
               error={formErrors['city']}
-              label={'Tỉnh/ Thành Phố'}
+              label={'City'}
               name={'city'}
               placeholder={'City'}
               value={addressFormData.city}
@@ -50,25 +50,49 @@ const AddAddress = props => {
               }}
             />
           </Col>
-          
+          <Col xs='12' lg='6'>
+            <Input
+              type={'text'}
+              error={formErrors['state']}
+              label={'State'}
+              name={'state'}
+              placeholder={'State'}
+              value={addressFormData.state}
+              onInputChange={(name, value) => {
+                addressChange(name, value);
+              }}
+            />
+          </Col>
           <Col xs='12' lg='6'>
             <Input
               type={'text'}
               error={formErrors['country']}
-              label={'Quốc gia'}
+              label={'Country'}
               name={'country'}
-              placeholder={'Việt Nam'}
+              placeholder={'Please Enter Your country'}
               value={addressFormData.country}
               onInputChange={(name, value) => {
                 addressChange(name, value);
               }}
             />
           </Col>
-          
+          <Col xs='12' lg='6'>
+            <Input
+              type={'text'}
+              error={formErrors['zipCode']}
+              label={'Zipcode'}
+              name={'zipCode'}
+              placeholder={'Please Enter Your Zipcode'}
+              value={addressFormData.zipCode}
+              onInputChange={(name, value) => {
+                addressChange(name, value);
+              }}
+            />
+          </Col>
           <Col xs='12' md='12'>
             <Checkbox
               id={'default'}
-              label={'Đặt làm địa chỉ mặc định'}
+              label={'As the Default'}
               name={'isDefault'}
               checked={addressFormData.isDefault}
               onChange={(name, value) => {
@@ -79,7 +103,7 @@ const AddAddress = props => {
         </Row>
         <hr />
         <div className='add-address-actions'>
-          <Button type='submit' text='Thêm' />
+          <Button type='submit' text='Add Address' />
         </div>
       </form>
     </div>

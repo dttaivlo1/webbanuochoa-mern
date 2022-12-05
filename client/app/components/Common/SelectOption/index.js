@@ -56,7 +56,7 @@ const dropdownStyles = {
     return {
       ...styles,
       color: '#323232',
-        fontFamily: 'Poppins',
+     
       backgroundColor: 'white',
       transition: '0.3s',
       boxShadow: 'none',
@@ -79,7 +79,7 @@ const dropdownStyles = {
     return {
       ...styles,
       color: '#323232',
-      fontFamily: 'Poppins',
+    
       backgroundColor: isDisabled
         ? undefined
         : isSelected
@@ -118,7 +118,7 @@ const dropdownStyles = {
   }),
   singleValue: styles => ({
     ...styles,
-    color: '#323232',
-    fontFamily: 'Poppins'
+    color: '#323232'
+    
   })
 };

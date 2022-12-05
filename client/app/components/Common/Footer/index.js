@@ -13,18 +13,18 @@ import Newsletter from '../../../containers/Newsletter';
 
 const Footer = () => {
   const infoLinks = [
-    { id: 0, name: 'Liên hệ với chúng tôi', to: '/contact' },
-    { id: 1, name: 'Chính sách đổi trả', to: '/sell' },
-    { id: 2, name: 'Chính sách vận chuyển', to: '/shipping' }
+    { id: 0, name: 'Contact Us', to: '/contact' },
+    { id: 1, name: 'Sell With Us', to: '/sell' },
+    { id: 2, name: 'Shipping', to: '/shipping' }
   ];
 
   const footerBusinessLinks = (
     <ul className='support-links'>
       <li className='footer-link'>
-        <Link to='/dashboard'>Thông tin tài khoản</Link>
+        <Link to='/dashboard'>Account Details</Link>
       </li>
       <li className='footer-link'>
-        <Link to='/dashboard/orders'>Đơn hàng</Link>
+        <Link to='/dashboard/orders'>Orders</Link>
       </li>
     </ul>
   );
@@ -43,7 +43,7 @@ const Footer = () => {
         <div className='footer-content'>
           <div className='footer-block'>
             <div className='block-title'>
-              <h3 className='text-uppercase'>Liên hệ với chúng tôi</h3>
+              <h3 className='text-uppercase'>Customer Service</h3>
             </div>
             <div className='block-content'>
               <ul>{footerLinks}</ul>
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
           <div className='footer-block'>
             <div className='block-title'>
-              <h3 className='text-uppercase'>Liên kết</h3>
+              <h3 className='text-uppercase'>Links</h3>
             </div>
             <div className='block-content'>
               <ul>{footerLinks}</ul>
@@ -59,13 +59,13 @@ const Footer = () => {
           </div>
           <div className='footer-block'>
             <div className='block-title'>
-              <h3 className='text-uppercase'>Hộp thư</h3>
+              <h3 className='text-uppercase'>Newsletter</h3>
               <Newsletter />
             </div>
           </div>
         </div>
         <div className='footer-copyright'>
-          <span>© {new Date().getFullYear()} TMDTperfume</span>
+          <span>© {new Date().getFullYear()} MERN Store</span>
         </div>
         <ul className='footer-social-item'>
           <li>

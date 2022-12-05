@@ -123,15 +123,15 @@ export const addBrand = () => {
     try {
       const rules = {
         name: 'required',
-        description: 'required|max:2000'
+        description: 'required|max:200'
       };
 
       const brand = getState().brand.brandFormData;
 
       const { isValid, errors } = allFieldsValidation(brand, rules, {
-        'required.name': 'Vui lòng nhập tên.',
-        'required.description': 'Vui lòng nhập mô tả.',
-        'max.description': 'Mô tả dài tối đa 500 kí tự'
+        'required.name': 'Name is required.',
+        'required.description': 'Description is required.',
+        'max.description': 'Description may not be greater than 200 characters.'
       });
 
       if (!isValid) {
@@ -169,7 +169,7 @@ export const updateBrand = () => {
       const rules = {
         name: 'required',
         slug: 'required|alpha_dash',
-        description: 'required|max:2000'
+        description: 'required|max:200'
       };
 
       const brand = getState().brand.brand;
@@ -181,12 +181,12 @@ export const updateBrand = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newBrand, rules, {
-        'required.name': 'Vui lòng nhập tên.',
-        'required.slug': 'Vui lòng nhập từ khoá.',
+        'required.name': 'Name is required.',
+        'required.slug': 'Slug is required.',
         'alpha_dash.slug':
-          'aaaa.',
-        'required.description': 'Vui lòng nhập mô tả.',
-        'max.description': 'Mô tả không dài quá 500 lí tự.'
+          'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
+        'required.description': 'Description is required.',
+        'max.description': 'Description may not be greater than 200 characters.'
       });
 
       if (!isValid) {

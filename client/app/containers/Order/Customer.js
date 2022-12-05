@@ -95,7 +95,7 @@ class Customer extends React.PureComponent {
             </>
           )}
           {!isLoading && !displayOrders && (
-            <NotFound message='Không có đơn hàng nào!' />
+            <NotFound message='No orders found.' />
           )}
         </SubPage>
       </div>

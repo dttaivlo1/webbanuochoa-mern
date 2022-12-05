@@ -42,9 +42,9 @@ const EditBrand = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Tên nhãn hàng'}
+              label={'Name'}
               name={'name'}
-              placeholder={'chôcfoaf'}
+              placeholder={'Brand Name'}
               value={brand.name}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -55,9 +55,9 @@ const EditBrand = props => {
             <Input
               type={'text'}
               error={formErrors['slug']}
-              label={'liên kết'}
+              label={'Slug'}
               name={'slug'}
-              placeholder={'ccoco-daa'}
+              placeholder={'Brand Slug'}
               value={brand.slug}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -68,9 +68,9 @@ const EditBrand = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Mô tả'}
+              label={'Description'}
               name={'description'}
-              placeholder={'...'}
+              placeholder={'Brand Description'}
               value={brand.description}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -84,7 +84,7 @@ const EditBrand = props => {
               tooltipContent={`Disabling ${brand.name} will also disable all ${brand.name} products.`}
               id={`enable-brand-${brand._id}`}
               name={'isActive'}
-              label={'Khả dụng?'}
+              label={'Active?'}
               checked={brand.isActive}
               toggleCheckboxChange={value => activateBrand(brand._id, value)}
             />
