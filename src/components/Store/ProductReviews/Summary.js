@@ -55,11 +55,11 @@ const Summary = props => {
             <div className='middle'>
               <div className='bar-container'>
                 <div
-                  className={`bar-${parseInt(Object.keys(r)[0])}`}
+                  className={'bar-${parseInt(Object.keys(r)[0])}'}
                   style={{
-                    width: `${getRatingPercentage(
+                    width: '${getRatingPercentage(
                       parseInt(r[Object.keys(r)[0]])
-                    )}%`
+                    )}%'
                   }}
                 ></div>
               </div>

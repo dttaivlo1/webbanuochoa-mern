@@ -43,9 +43,9 @@ export const forgotPassowrd = () => {
         });
       }
 
-      const response = await axios.post('/api/auth/forgot', user);
+      const response = await axios.post('http://localhost:3000/api/auth/forgot', user);
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -57,7 +57,7 @@ export const forgotPassowrd = () => {
 
       dispatch({ type: FORGOT_PASSWORD_RESET });
     } catch (error) {
-      const title = `Please try again!`;
+      const title = 'Please try again!';
       handleError(error, dispatch, title);
     }
   };

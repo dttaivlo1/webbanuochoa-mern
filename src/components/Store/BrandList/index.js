@@ -20,7 +20,7 @@ const BrandList = props => {
         {brands.map((brand, index) => (
           <Col xs='6' md='4' lg='3' key={index} className='mb-3 px-2'>
             <Link
-              to={`/shop/brand/${brand.slug}`}
+              to={'/shop/brand/${brand.slug}'}
               className='d-block brand-box'
             >
               <h5>{brand.name}</h5>

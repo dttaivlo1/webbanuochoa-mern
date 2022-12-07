@@ -29,15 +29,15 @@ const CartList = props => {
                   <div className='d-flex align-items-center'>
                     <img
                       className='item-image mr-2'
-                      src={`${
+                      src={'${
                         item.imageUrl
                           ? item.imageUrl
                           : '/images/placeholder-image.png'
-                      }`}
+                      }'}
                     />
 
                     <Link
-                      to={`/product/${item.slug}`}
+                      to={'/product/${item.slug}'}
                       className='item-link one-line-ellipsis'
                       onClick={handleProductClick}
                     >
@@ -51,7 +51,7 @@ const CartList = props => {
                   <Button
                     borderless
                     variant='empty'
-                    ariaLabel={`remove ${item.name} from cart`}
+                    ariaLabel={'remove ${item.name} from cart'}
                     icon={<i className='icon-trash' aria-hidden='true' />}
                     onClick={() => handleRemoveFromCart(item)}
                   />
@@ -62,7 +62,7 @@ const CartList = props => {
                   <p className='item-label'>price</p>
                 </Col>
                 <Col xs='3' className='text-right'>
-                  <p className='value price'>{` $${item?.totalPrice}`}</p>
+                  <p className='value price'>{' $${item?.totalPrice}'}</p>
                 </Col>
               </Row>
               <Row className='mb-2 align-items-center'>
@@ -70,7 +70,7 @@ const CartList = props => {
                   <p className='item-label'>quantity</p>
                 </Col>
                 <Col xs='3' className='text-right'>
-                  <p className='value quantity'>{` ${item.quantity}`}</p>
+                  <p className='value quantity'>{' ${item.quantity}'}</p>
                 </Col>
               </Row>
             </Container>

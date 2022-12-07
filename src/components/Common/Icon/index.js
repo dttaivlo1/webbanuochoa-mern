@@ -81,7 +81,7 @@ const CheckIcon = ({
 }) => {
   return (
     <svg
-      className={`${className} check-icon`}
+      className={'${className} check-icon'}
       xmlns='http://www.w3.org/2000/svg'
       width={width}
       height={height}
@@ -101,7 +101,7 @@ const CheckIcon = ({
 const RefreshIcon = ({ className = '', width = '20', height = '20' }) => {
   return (
     <svg
-      className={`${className} refresh-icon`}
+      className={'${className} refresh-icon'}
       xmlns='http://www.w3.org/2000/svg'
       width={width}
       height={height}
@@ -122,7 +122,7 @@ const RefreshIcon = ({ className = '', width = '20', height = '20' }) => {
 const AddressIcon = ({ className = '', width = '20', height = '20' }) => {
   return (
     <svg
-      className={`${className} address-icon`}
+      className={'${className} address-icon'}
       enableBackground='new 0 0 512 512'
       width={width}
       height={height}
@@ -177,7 +177,7 @@ const AddressIcon = ({ className = '', width = '20', height = '20' }) => {
 const ReviewIcon = ({ className = '', width = '60', height = '60' }) => {
   return (
     <svg
-      className={`${className} review-icon`}
+      className={'${className} review-icon'}
       enableBackground='new 0 0 512 512'
       width={width}
       height={height}
@@ -234,7 +234,7 @@ const ReviewIcon = ({ className = '', width = '60', height = '60' }) => {
 const TrashIcon = ({ className = '', width = '20', height = '20' }) => {
   return (
     <svg
-      className={`${className} trash-icon`}
+      className={'${className} trash-icon'}
       xmlns='http://www.w3.org/2000/svg'
       width={width}
       height={height}
@@ -254,7 +254,7 @@ const TrashIcon = ({ className = '', width = '20', height = '20' }) => {
 const XIcon = ({ className = '', width = '20', height = '20' }) => {
   return (
     <svg
-      className={`${className} x-icon`}
+      className={'${className} x-icon'}
       xmlns='http://www.w3.org/2000/svg'
       width={width}
       height={height}
@@ -274,7 +274,7 @@ const XIcon = ({ className = '', width = '20', height = '20' }) => {
 const HeartIcon = ({ className = '' }) => {
   return (
     <svg
-      className={`${className} heart-icon`}
+      className={'${className} heart-icon'}
       enableBackground='new 467 392 58 57'
       viewBox='467 392 58 57'
       xmlns='http://www.w3.org/2000/svg'
@@ -341,7 +341,7 @@ const HeartIcon = ({ className = '' }) => {
 const ArrowBackIcon = ({ className = '', width = '20', height = '20' }) => {
   return (
     <svg
-      className={`${className} arrow-left-icon`}
+      className={'${className} arrow-left-icon'}
       xmlns='http://www.w3.org/2000/svg'
       width={width}
       height={height}

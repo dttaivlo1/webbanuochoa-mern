@@ -48,15 +48,15 @@ const Button = props => {
   const btn =
     icon && text ? 'with-icon' : icon && !text ? 'icon-only' : 'text-only';
 
-  const classNames = `input-btn${`${className && ` ${className}`}`}${
-    btnVariant && ` ${btnVariant}`
-  }${` ${size}`} ${btn} ${
+  const classNames = 'input-btn${'${className && ' ${className}'}'}${
+    btnVariant && ' ${btnVariant}'
+  }${' ${size}'} ${btn} ${
     iconDirection === 'left' ? 'icon-left' : 'icon-right'
-  } ${borderless ? 'border-0' : ''}`;
+  } ${borderless ? 'border-0' : ''}';
 
-  const iconClassNames = `btn-icon${`${iconClassName && ` ${iconClassName}`}`}`;
+  const iconClassNames = 'btn-icon${'${iconClassName && ' ${iconClassName}'}'}';
 
-  const tooltipId = tooltip ? `tooltip-${id}` : id;
+  const tooltipId = tooltip ? 'tooltip-${id}' : id;
 
   return (
     <button

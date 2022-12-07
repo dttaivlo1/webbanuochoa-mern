@@ -77,15 +77,15 @@ class Navigation extends React.PureComponent {
     };
 
     return (
-      <Link to={`/product/${suggestion.slug}`}>
+      <Link to={'/product/${suggestion.slug}'}>
         <div className='d-flex'>
           <img
             className='item-image'
-            src={`${
+            src={'${
               suggestion.imageUrl
                 ? suggestion.imageUrl
                 : '/images/placeholder-image.png'
-            }`}
+            }'}
           />
           <div>
             <Container>
@@ -199,7 +199,7 @@ class Navigation extends React.PureComponent {
                 renderSuggestion={this.renderSuggestion}
                 inputProps={inputProps}
                 onSuggestionSelected={(_, item) => {
-                  history.push(`/product/${item.suggestion.slug}`);
+                  history.push('/product/${item.suggestion.slug}');
                 }}
               />
             </Col>
@@ -305,7 +305,7 @@ class Navigation extends React.PureComponent {
         {/* hidden cart drawer */}
         <div
           className={isCartOpen ? 'mini-cart-open' : 'hidden-mini-cart'}
-          aria-hidden={`${isCartOpen ? false : true}`}
+          aria-hidden={'${isCartOpen ? false : true}'}
         >
           <div className='mini-cart'>
             <Cart />
@@ -321,7 +321,7 @@ class Navigation extends React.PureComponent {
         {/* hidden menu drawer */}
         <div
           className={isMenuOpen ? 'mini-menu-open' : 'hidden-mini-menu'}
-          aria-hidden={`${isMenuOpen ? false : true}`}
+          aria-hidden={'${isMenuOpen ? false : true}'}
         >
           <div className='mini-menu'>
             <Menu />

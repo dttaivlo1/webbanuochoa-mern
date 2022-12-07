@@ -27,7 +27,7 @@ const SelectOption = props => {
 
   const animatedComponents = makeAnimated();
 
-  const styles = `select-box${error ? ' invalid' : ''}`;
+  const styles = 'select-box${error ? ' invalid' : ''}';
 
   return (
     <div className={styles}>

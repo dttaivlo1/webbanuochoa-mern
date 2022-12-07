@@ -33,7 +33,7 @@ const MessagesList = props => {
   return (
     <>
       {messages && !emptyMsgs ? (
-        <div className={`m-list ${!emptyMsgs ? '' : 'empty'}`}>
+        <div className={'m-list ${!emptyMsgs ? '' : 'empty'}'}>
           {renderMessages()}
           <div ref={messagesEndRef} />
         </div>
@@ -67,9 +67,9 @@ const Message = memo(props => {
   return (
     <div className='m-container'>
       <div
-        className={`d-flex ${
+        className={'d-flex ${
           isMe ? 'justify-content-end' : 'justify-content-start'
-        }`}
+        }'}
       >
         {!isMe && (
           <div className='mr-2 avatar-box'>
@@ -83,10 +83,10 @@ const Message = memo(props => {
               {formatTime(message.time)}
             </div>
           ) : (
-            <div className={`d-flex mb-2 text-right`}>
+            <div className={'d-flex mb-2 text-right'}>
               {!noHeader && (
                 <>
-                  <p className={`mb-0 fw-normal text-black`}>
+                  <p className={'mb-0 fw-normal text-black'}>
                     {message.user.name}
                   </p>
                   <div className='ml-2 text-black'>
@@ -97,7 +97,7 @@ const Message = memo(props => {
             </div>
           )}
 
-          <p className={`${isMe ? 'me' : ''} m-box`}>{message.value}</p>
+          <p className={'${isMe ? 'me' : ''} m-box'}>{message.value}</p>
         </div>
       </div>
     </div>

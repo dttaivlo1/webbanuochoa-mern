@@ -35,7 +35,7 @@ const Input = props => {
   };
 
   if (type === 'textarea') {
-    const styles = `input-box${error ? ' invalid' : ''}`;
+    const styles = 'input-box${error ? ' invalid' : ''}';
 
     return (
       <div className={styles}>
@@ -55,7 +55,7 @@ const Input = props => {
       </div>
     );
   } else if (type === 'number') {
-    const styles = `input-box${error ? ' invalid' : ''}`;
+    const styles = 'input-box${error ? ' invalid' : ''}';
 
     const handleOnInput = e => {
       if (!decimals) {
@@ -86,7 +86,7 @@ const Input = props => {
       </div>
     );
   } else if (type === 'stars') {
-    const styles = `input-box${error ? ' invalid' : ''}`;
+    const styles = 'input-box${error ? ' invalid' : ''}';
 
     return (
       <div className={styles}>
@@ -111,9 +111,9 @@ const Input = props => {
       </div>
     );
   } else {
-    const styles = `input-box${inlineElement ? ` inline-btn-box` : ''} ${
+    const styles = 'input-box${inlineElement ? ' inline-btn-box' : ''} ${
       error ? 'invalid' : ''
-    }`;
+    }';
 
     return (
       <div className={styles}>

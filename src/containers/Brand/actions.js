@@ -51,7 +51,7 @@ export const brandEditChange = (name, value) => {
 export const fetchStoreBrands = () => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/brand/list`);
+      const response = await axios.get('http://localhost:3000/api/brand/list');
 
       dispatch({
         type: FETCH_STORE_BRANDS,
@@ -69,7 +69,7 @@ export const fetchBrands = () => {
     try {
       dispatch({ type: SET_BRANDS_LOADING, payload: true });
 
-      const response = await axios.get(`/api/brand`);
+      const response = await axios.get('/api/brand');
 
       dispatch({
         type: FETCH_BRANDS,
@@ -87,7 +87,7 @@ export const fetchBrands = () => {
 export const fetchBrand = brandId => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/brand/${brandId}`);
+      const response = await axios.get('/api/brand/${brandId}');
 
       dispatch({
         type: FETCH_BRAND,
@@ -103,7 +103,7 @@ export const fetchBrand = brandId => {
 export const fetchBrandsSelect = () => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/brand/list/select`);
+      const response = await axios.get(process.env.BASE_SERVER_ULR+'/api/brand/list/select');
 
       const formattedBrands = formatSelectOptions(response.data.brands, true);
 
@@ -138,10 +138,10 @@ export const addBrand = () => {
         return dispatch({ type: SET_BRAND_FORM_ERRORS, payload: errors });
       }
 
-      const response = await axios.post(`/api/brand/add`, brand);
+      const response = await axios.post('/api/brand/add', brand);
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -193,12 +193,12 @@ export const updateBrand = () => {
         return dispatch({ type: SET_BRAND_FORM_EDIT_ERRORS, payload: errors });
       }
 
-      const response = await axios.put(`/api/brand/${brand._id}`, {
+      const response = await axios.put('/api/brand/${brand._id}', {
         brand: newBrand
       });
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -218,14 +218,14 @@ export const updateBrand = () => {
 export const activateBrand = (id, value) => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.put(`/api/brand/${id}/active`, {
+      const response = await axios.put('/api/brand/${id}/active', {
         brand: {
           isActive: value
         }
       });
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -243,10 +243,10 @@ export const activateBrand = (id, value) => {
 export const deleteBrand = id => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.delete(`/api/brand/delete/${id}`);
+      const response = await axios.delete('/api/brand/delete/${id}');
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };

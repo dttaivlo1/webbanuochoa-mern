@@ -62,7 +62,7 @@ export const fetchAddresses = () => {
   return async (dispatch, getState) => {
     try {
       dispatch(setAddressLoading(true));
-      const response = await axios.get(`/api/address`);
+      const response = await axios.get('http://localhost:3000/api/address');
       dispatch({ type: FETCH_ADDRESSES, payload: response.data.addresses });
     } catch (error) {
       handleError(error, dispatch);
@@ -76,7 +76,7 @@ export const fetchAddresses = () => {
 export const fetchAddress = addressId => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/address/${addressId}`);
+      const response = await axios.get('/api/address/${addressId}');
 
       dispatch({
         type: FETCH_ADDRESS,
@@ -119,10 +119,10 @@ export const addAddress = () => {
         ...newAddress
       };
 
-      const response = await axios.post(`/api/address/add`, address);
+      const response = await axios.post('/api/address/add', address);
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -172,12 +172,12 @@ export const updateAddress = () => {
       }
 
       const response = await axios.put(
-        `/api/address/${newAddress._id}`,
+        '/api/address/${newAddress._id}',
         newAddress
       );
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -196,10 +196,10 @@ export const updateAddress = () => {
 export const deleteAddress = id => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.delete(`/api/address/delete/${id}`);
+      const response = await axios.delete('/api/address/delete/${id}');
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };

@@ -11,14 +11,14 @@ const LoadingIndicator = props => {
 
   return (
     <div
-      className={`spinner-container${
+      className={'spinner-container${
         inline ? ' position-relative' : ' position-fixed overlay'
-      } ${backdrop ? 'backdrop' : ''}`}
+      } ${backdrop ? 'backdrop' : ''}'}
     >
       <div
-        className={`spinner${
+        className={'spinner${
           inline ? ' position-relative' : ' position-fixed overlay'
-        }`}
+        }'}
       ></div>
     </div>
   );

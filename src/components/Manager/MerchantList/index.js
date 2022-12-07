@@ -55,7 +55,7 @@ const MerchantList = props => {
                     tooltipContent={
                       merchant.isActive ? 'Disable Merchant' : 'Enable Merchant'
                     }
-                    id={`merchant-${merchant._id}`}
+                    id={'merchant-${merchant._id}'}
                     name={'isActive'}
                     label={'Active?'}
                     checked={merchant.isActive}
@@ -70,7 +70,7 @@ const MerchantList = props => {
                     icon={<TrashIcon width={20} />}
                     tooltip={true}
                     tooltipContent='Delete'
-                    id={`delete-${merchant._id}`}
+                    id={'delete-${merchant._id}'}
                     onClick={() => deleteMerchant(merchant)}
                   />
                 </div>
@@ -84,7 +84,7 @@ const MerchantList = props => {
                     icon={<RefreshIcon width={18} className='text-primary' />}
                     tooltip={true}
                     tooltipContent='Re-Approve'
-                    id={`re-approve-${merchant._id}`}
+                    id={'re-approve-${merchant._id}'}
                     onClick={() => approveMerchant(merchant)}
                   />
                   <div className='d-flex flex-row align-items-center mx-0'>
@@ -95,7 +95,7 @@ const MerchantList = props => {
                           ? 'Disable Merchant'
                           : 'Enable Merchant'
                       }
-                      id={`merchant-${merchant._id}`}
+                      id={'merchant-${merchant._id}'}
                       name={'isActive'}
                       label={'Active?'}
                       checked={merchant.isActive}
@@ -110,7 +110,7 @@ const MerchantList = props => {
                       icon={<TrashIcon width={20} />}
                       tooltip={true}
                       tooltipContent='Delete'
-                      id={`delete-${merchant._id}`}
+                      id={'delete-${merchant._id}'}
                       onClick={() => deleteMerchant(merchant)}
                     />
                   </div>
@@ -125,7 +125,7 @@ const MerchantList = props => {
                     icon={<CheckIcon width={18} className='text-green' />}
                     tooltip={true}
                     tooltipContent='Approve'
-                    id={`approve-${merchant._id}`}
+                    id={'approve-${merchant._id}'}
                     onClick={() => approveMerchant(merchant)}
                   />
                   <Button
@@ -135,7 +135,7 @@ const MerchantList = props => {
                     icon={<XIcon width={20} />}
                     tooltip={true}
                     tooltipContent='Reject'
-                    id={`reject-${merchant._id}`}
+                    id={'reject-${merchant._id}'}
                     onClick={() => rejectMerchant(merchant)}
                   />
                 </div>
@@ -145,7 +145,7 @@ const MerchantList = props => {
                     tooltipContent={
                       merchant.isActive ? 'Disable Merchant' : 'Enable Merchant'
                     }
-                    id={`merchant-${merchant._id}`}
+                    id={'merchant-${merchant._id}'}
                     name={'isActive'}
                     label={'Active?'}
                     checked={merchant.isActive}
@@ -160,7 +160,7 @@ const MerchantList = props => {
                     icon={<TrashIcon width={20} />}
                     tooltip={true}
                     tooltipContent='Delete'
-                    id={`delete-${merchant._id}`}
+                    id={'delete-${merchant._id}'}
                     onClick={() => deleteMerchant(merchant)}
                   />
                 </div>
@@ -170,7 +170,7 @@ const MerchantList = props => {
                 <p className='text-truncate'>
                   Merchant doesn't have email. Call at
                   <a
-                    href={`tel:${merchant.phoneNumber}`}
+                    href={'tel:${merchant.phoneNumber}'}
                     className='text-primary'
                   >
                     {' '}
@@ -183,7 +183,7 @@ const MerchantList = props => {
                   icon={<TrashIcon width={20} />}
                   tooltip={true}
                   tooltipContent='Delete'
-                  id={`delete-${merchant._id}`}
+                  id={'delete-${merchant._id}'}
                   onClick={() => deleteMerchant(merchant)}
                 />
               </>

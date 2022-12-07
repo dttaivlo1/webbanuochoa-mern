@@ -54,9 +54,9 @@ export const resetPassword = token => {
         });
       }
 
-      const response = await axios.post(`/api/auth/reset/${token}`, user);
+      const response = await axios.post('/api/auth/reset/${token}', user);
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -68,7 +68,7 @@ export const resetPassword = token => {
       dispatch(success(successfulOptions));
       dispatch({ type: RESET_PASSWORD_RESET });
     } catch (error) {
-      const title = `Please try to reset again!`;
+      const title = 'Please try to reset again!';
       handleError(error, dispatch, title);
     }
   };
@@ -98,9 +98,9 @@ export const resetAccountPassword = () => {
         });
       }
 
-      const response = await axios.post(`/api/auth/reset`, user);
+      const response = await axios.post('/api/auth/reset', user);
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };
@@ -112,7 +112,7 @@ export const resetAccountPassword = () => {
       dispatch(success(successfulOptions));
       dispatch({ type: RESET_PASSWORD_RESET });
     } catch (error) {
-      const title = `Please try to reset again!`;
+      const title = 'Please try to reset again!';
       handleError(error, dispatch, title);
     }
   };

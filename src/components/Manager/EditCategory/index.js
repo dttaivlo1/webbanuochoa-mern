@@ -34,7 +34,7 @@ const EditCategory = props => {
     <div className='edit-category'>
       <div className='d-flex flex-row mx-0 mb-3'>
         <label className='mr-1'>Category link </label>
-        <Link to={`/shop/category/${category.slug}`} className='default-link'>
+        <Link to={'/shop/category/${category.slug}'} className='default-link'>
           {category.slug}
         </Link>
       </div>
@@ -95,8 +95,8 @@ const EditCategory = props => {
             <Switch
               style={{ width: 100 }}
               tooltip={category.isActive}
-              tooltipContent={`Disabling ${category.name} will also disable all ${category.name} products.`}
-              id={`enable-category-${category._id}`}
+              tooltipContent={'Disabling ${category.name} will also disable all ${category.name} products.'}
+              id={'enable-category-${category._id}'}
               name={'isActive'}
               label={'Active?'}
               checked={category.isActive}

@@ -38,11 +38,11 @@ const ReviewList = props => {
         <div className='d-flex flex-column justify-content-center align-items-center'>
           <img
             className='item-image'
-            src={`${
+            src={'${
               product.imageUrl
                 ? product.imageUrl
                 : '/images/placeholder-image.png'
-            }`}
+            }'}
           />
         </div>
       );
@@ -72,7 +72,7 @@ const ReviewList = props => {
               <div className='w-100 mb-3 mb-lg-0 review-product-box'>
                 {review.product ? (
                   <Link
-                    to={`/product/${review.product.slug}`}
+                    to={'/product/${review.product.slug}'}
                     className='default-link'
                   >
                     {review?.product.name}
@@ -97,9 +97,9 @@ const ReviewList = props => {
               </div>
               {getProduct(review)}
             </div>
-            <label className='text-black'>{`Review Added on ${formatDate(
+            <label className='text-black'>{'Review Added on ${formatDate(
               review.created
-            )}`}</label>
+            )}'}</label>
             <hr />
             {review.status === 'Approved' ? (
               <div className='d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mx-0'>

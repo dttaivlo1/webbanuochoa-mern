@@ -31,18 +31,18 @@ const ProductList = props => {
 
               <div className='item-link'>
                 <Link
-                  to={`/product/${product.slug}`}
+                  to={'/product/${product.slug}'}
                   className='d-flex flex-column h-100'
                 >
                   <div className='item-image-container'>
                     <div className='item-image-box'>
                       <img
                         className='item-image'
-                        src={`${
+                        src={'${
                           product.imageUrl
                             ? product.imageUrl
                             : '/images/placeholder-image.png'
-                        }`}
+                        }'}
                       />
                     </div>
                   </div>
@@ -65,9 +65,9 @@ const ProductList = props => {
                           {parseFloat(product?.averageRating).toFixed(1)}
                         </span>
                         <span
-                          className={`fa fa-star ${
+                          className={'fa fa-star ${
                             product.totalReviews !== 0 ? 'checked' : ''
-                          }`}
+                          }'}
                           style={{ color: '#ffb302' }}
                         ></span>
                       </p>

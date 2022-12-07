@@ -15,7 +15,7 @@ const AddToWishList = props => {
   return (
     <div className='add-to-wishlist'>
       <Checkbox
-        id={`checkbox_${id}`}
+        id={'checkbox_${id}'}
         name={'wishlist'}
         disabled={!enabled}
         checked={liked}

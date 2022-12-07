@@ -42,7 +42,7 @@ export const fetchProfile = () => {
   return async (dispatch, getState) => {
     try {
       dispatch(setProfileLoading(true));
-      const response = await axios.get(`/api/user/me`);
+      const response = await axios.get('http://localhost:3000/api/user/me');
 
       dispatch({ type: FETCH_PROFILE, payload: response.data.user });
     } catch (error) {
@@ -58,12 +58,12 @@ export const updateProfile = () => {
     const profile = getState().account.user;
 
     try {
-      const response = await axios.put(`/api/user`, {
+      const response = await axios.put('http://localhost:3000/api/user', {
         profile
       });
 
       const successfulOptions = {
-        title: `${response.data.message}`,
+        title: '${response.data.message}',
         position: 'tr',
         autoDismiss: 1
       };

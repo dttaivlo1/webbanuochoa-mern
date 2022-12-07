@@ -41,7 +41,7 @@ const EditProduct = props => {
     <div className='edit-product'>
       <div className='d-flex flex-row mx-0 mb-3'>
         <label className='mr-1'>Product link </label>
-        <Link to={`/product/${product.slug}`} className='default-link'>
+        <Link to={'/product/${product.slug}'} className='default-link'>
           {product.slug}
         </Link>
       </div>
@@ -157,7 +157,7 @@ const EditProduct = props => {
           )}
           <Col xs='12' md='12' className='mt-3 mb-2'>
             <Switch
-              id={`enable-product-${product._id}`}
+              id={'enable-product-${product._id}'}
               name={'isActive'}
               label={'Active?'}
               checked={product?.isActive}

@@ -24,11 +24,11 @@ const Checkbox = props => {
 
   const isLabelText = label && typeof label === 'string';
   const extraClassName = isLabelText
-    ? ` default-icon ${className}`
-    : ` custom-icon ${className}`;
+    ? ' default-icon ${className}'
+    : ' custom-icon ${className}';
 
   return (
-    <div className={`checkbox${extraClassName}`}>
+    <div className={'checkbox${extraClassName}'}>
       <input
         className={'input-checkbox'}
         type={'checkbox'}

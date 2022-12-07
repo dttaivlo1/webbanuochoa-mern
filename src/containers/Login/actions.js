@@ -56,12 +56,12 @@ export const login = () => {
     dispatch({ type: SET_LOGIN_LOADING, payload: true });
 
     try {
-      const response = await axios.post('/api/auth/login', user);
+      const response = await axios.post('http://localhost:3000/api/auth/login', user);
 
       const firstName = response.data.user.firstName;
 
       const successfulOptions = {
-        title: `Hey${firstName ? ` ${firstName}` : ''}, Welcome Back!`,
+        title: 'Hey${firstName ? ' ${firstName}' : ''}, Welcome Back!',
         position: 'tr',
         autoDismiss: 1
       };
@@ -75,7 +75,7 @@ export const login = () => {
 
       dispatch({ type: LOGIN_RESET });
     } catch (error) {
-      const title = `Please try to login again!`;
+      const title = 'Please try to login again!';
       handleError(error, dispatch, title);
     } finally {
       dispatch({ type: SET_LOGIN_SUBMITTING, payload: false });
@@ -87,7 +87,7 @@ export const login = () => {
 export const signOut = () => {
   return (dispatch, getState) => {
     const successfulOptions = {
-      title: `You have signed out!`,
+      title: 'You have signed out!',
       position: 'tr',
       autoDismiss: 1
     };

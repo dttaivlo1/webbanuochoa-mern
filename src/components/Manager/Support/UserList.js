@@ -26,7 +26,7 @@ const UserList = props => {
               iconDirection='right'
               icon={
                 <span
-                  className={`circle ${isOnline ? 'online' : 'offline'}`}
+                  className={'circle ${isOnline ? 'online' : 'offline'}'}
                 ></span>
               }
             />
@@ -46,11 +46,11 @@ const UserList = props => {
   //         .filter(x => x._id !== user._id)
   //         .map((user, index) => (
   //           <li
-  //             style={{ animationDelay: `0.2s` }}
+  //             style={{ animationDelay: '0.2s' }}
   //             key={index}
   //             className={
   //               user._id === selectedUser?._id
-  //                 ? `chatlist-item active `
+  //                 ? 'chatlist-item active '
   //                 : 'chatlist-item'
   //             }
   //           >

@@ -29,7 +29,7 @@ const OrderItems = props => {
       <div className='d-flex flex-column align-items-center justify-content-center'>
         {statuses.map((s, i) => (
           <DropdownItem
-            key={`${s}-${i}`}
+            key={'${s}-${i}'}
             className={s === item?.status ? 'active' : ''}
             onClick={() => updateOrderItemStatus(item._id, s)}
           >
@@ -46,7 +46,7 @@ const OrderItems = props => {
     if (item.status === 'Delivered') {
       return (
         <Link
-          to={`/product/${item.product.slug}`}
+          to={'/product/${item.product.slug}'}
           className='btn-link text-center py-2 fs-12'
           style={{ minWidth: 120 }}
         >
@@ -58,7 +58,7 @@ const OrderItems = props => {
         return (
           <DropdownConfirm label='Cancel'>
             <div className='d-flex flex-column align-items-center justify-content-center p-2'>
-              <p className='text-center mb-2'>{`Are you sure you want to cancel ${item.product?.name}.`}</p>
+              <p className='text-center mb-2'>{'Are you sure you want to cancel ${item.product?.name}.'}</p>
               <Button
                 variant='danger'
                 id='CancelOrderItemPopover'
@@ -95,18 +95,18 @@ const OrderItems = props => {
                 <div className='d-flex align-items-center box'>
                   <img
                     className='item-image'
-                    src={`${
+                    src={'${
                       item.product && item.product.imageUrl
                         ? item.product.imageUrl
                         : '/images/placeholder-image.png'
-                    }`}
+                    }'}
                   />
                   <div className='d-md-flex flex-1 align-items-start ml-4 item-box'>
                     <div className='item-details'>
                       {item.product ? (
                         <>
                           <Link
-                            to={`/product/${item.product?.slug}`}
+                            to={'/product/${item.product?.slug}'}
                             className='item-link'
                           >
                             <h4 className='d-block item-name one-line-ellipsis'>
@@ -126,15 +126,15 @@ const OrderItems = props => {
                     <div className='d-flex justify-content-between flex-wrap d-md-none mt-1'>
                       <p className='mb-1 mr-4'>
                         Status
-                        <span className='order-label order-status'>{` ${item.status}`}</span>
+                        <span className='order-label order-status'>{' ${item.status}'}</span>
                       </p>
                       <p className='mb-1 mr-4'>
                         Quantity
-                        <span className='order-label'>{` ${item.quantity}`}</span>
+                        <span className='order-label'>{' ${item.quantity}'}</span>
                       </p>
                       <p>
                         Total Price
-                        <span className='order-label'>{` $${item.totalPrice}`}</span>
+                        <span className='order-label'>{' $${item.totalPrice}'}</span>
                       </p>
                     </div>
                   </div>
@@ -142,17 +142,17 @@ const OrderItems = props => {
 
                 <div className='d-none d-md-flex justify-content-between align-items-center box'>
                   <div className='text-center'>
-                    <p className='order-label order-status'>{`${item.status}`}</p>
+                    <p className='order-label order-status'>{'${item.status}'}</p>
                     <p>Status</p>
                   </div>
 
                   <div className='text-center'>
-                    <p className='order-label'>{` ${item.quantity}`}</p>
+                    <p className='order-label'>{' ${item.quantity}'}</p>
                     <p>Quantity</p>
                   </div>
 
                   <div className='text-center'>
-                    <p className='order-label'>{` $${item.totalPrice}`}</p>
+                    <p className='order-label'>{' $${item.totalPrice}'}</p>
 
                     <p>Total Price</p>
                   </div>

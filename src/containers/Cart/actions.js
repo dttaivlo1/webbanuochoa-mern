@@ -38,12 +38,12 @@ export const handleAddToCart = product => {
     const result = calculatePurchaseQuantity(inventory);
 
     const rules = {
-      quantity: `min:1|max:${result}`
+      quantity: 'min:1|max:${result}'
     };
 
     const { isValid, errors } = allFieldsValidation(product, rules, {
       'min.quantity': 'Quantity must be at least 1.',
-      'max.quantity': `Quantity may not be greater than ${result}.`
+      'max.quantity': 'Quantity may not be greater than ${result}.'
     });
 
     if (!isValid) {
@@ -130,7 +130,7 @@ export const handleCart = () => {
 export const handleCheckout = () => {
   return (dispatch, getState) => {
     const successfulOptions = {
-      title: `Please Login to proceed to checkout`,
+      title: 'Please Login to proceed to checkout',
       position: 'tr',
       autoDismiss: 1
     };
@@ -159,7 +159,7 @@ export const getCartId = () => {
 
       // create cart id if there is no one
       if (!cartId) {
-        const response = await axios.post(`/api/cart/add`, { products });
+        const response = await axios.post('/api/cart/add', { products });
 
         dispatch(setCartId(response.data.cartId));
       }

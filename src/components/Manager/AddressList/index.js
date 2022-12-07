@@ -17,7 +17,7 @@ const AddressList = props => {
     <div className='a-list'>
       {addresses.map((address, index) => (
         <Link
-          to={`/dashboard/address/edit/${address._id}`}
+          to={'/dashboard/address/edit/${address._id}'}
           key={index}
           className='d-block'
         >
@@ -37,7 +37,7 @@ const AddressList = props => {
                 <h4 className='mb-0'>Delivery Address</h4>
               )}
               <p className='mb-2 address-desc'>
-                {`${address?.address} ${address?.city}, ${address?.country}, ${address?.zipCode}`}
+                {'${address?.address} ${address?.city}, ${address?.country}, ${address?.zipCode}'}
               </p>
             </div>
           </div>

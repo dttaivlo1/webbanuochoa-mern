@@ -16,7 +16,7 @@ const DropdownConfirm = props => {
   const { className, label, children } = props;
 
   return (
-    <div className={`dropdown-confirm ${className}`}>
+    <div className={'dropdown-confirm ${className}'}>
       <UncontrolledButtonDropdown>
         <DropdownToggle nav>
           <div className='dropdown-action sm'>

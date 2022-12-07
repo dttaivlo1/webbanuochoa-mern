@@ -50,8 +50,8 @@ const List = props => {
                 value={review.rating}
               />
             </div>
-            <p className='mb-2 fs-12'>{formatDate(`${review?.created}`)}</p>
-            <p className='mb-0 three-line-ellipsis word-break-all'>{`${review?.review}`}</p>
+            <p className='mb-2 fs-12'>{formatDate('${review?.created}')}</p>
+            <p className='mb-0 three-line-ellipsis word-break-all'>{'${review?.review}'}</p>
           </div>
         </div>
       ))}

@@ -41,9 +41,9 @@ class Switch extends React.Component {
     const { className, style, id, label, tooltip, tooltipContent } = this.props;
     const { checked } = this.state;
 
-    const tooltipId = `tooltip-${id}`;
+    const tooltipId = 'tooltip-${id}';
 
-    const classNames = `switch-checkbox${`${className && ` ${className}`}`}`;
+    const classNames = 'switch-checkbox${'${className && ' ${className}'}'}';
 
     return (
       <div className={classNames} id={tooltipId} style={style}>

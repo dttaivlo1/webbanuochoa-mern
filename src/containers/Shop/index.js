@@ -66,8 +66,8 @@ class Shop extends React.PureComponent {
               >
                 <span>Showing: </span>
                 {totalProducts > 0
-                  ? `${left}-${right} products of ${count} products`
-                  : `${count} products`}
+                  ? '${left}-${right} products of ${count} products'
+                  : '${count} products'}
               </Col>
               <Col
                 xs={{ size: 12, order: 2 }}
