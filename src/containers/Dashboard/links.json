@@ -1,0 +1,34 @@
+{
+  "ROLE_ADMIN": [
+    { "to": "", "name": "Chi Tiết Tài Khoản", "prefix": "/dashboard" },
+    { "to": "/security", "name": "Bảo mật", "prefix": "/dashboard" },
+    { "to": "/address", "name": "Địa Chỉ", "prefix": "/dashboard" },
+    { "to": "/product", "name": "Sản Phẩm", "prefix": "/dashboard" },
+    { "to": "/category", "name": "Danh mục", "prefix": "/dashboard" },
+    { "to": "/brand", "name": "Nhãn Hàng", "prefix": "/dashboard" },
+    { "to": "/users", "name": "Tài khoản người dùng", "prefix": "/dashboard" },
+    { "to": "/merchant", "name": "NV Bán Hàng", "prefix": "/dashboard" },
+    { "to": "/orders", "name": "Đơn Hàng", "prefix": "/dashboard" },
+    { "to": "/review", "name": "Đánh giá", "prefix": "/dashboard" },
+    { "to": "/wishlist", "name": "DS yêu thích", "prefix": "/dashboard" },
+    { "to": "/support", "name": "Hỗ trợ" }
+  ],
+  "ROLE_MERCHANT": [
+    { "to": "", "name": "Account Details", "prefix": "/dashboard" },
+    { "to": "/security", "name": "Account Security", "prefix": "/dashboard" },
+    { "to": "/address", "name": "Address", "prefix": "/dashboard" },
+    { "to": "/brand", "name": "Brand", "prefix": "/dashboard" },
+    { "to": "/product", "name": "Products", "prefix": "/dashboard" },
+    { "to": "/orders", "name": "Orders", "prefix": "/dashboard" },
+    { "to": "/wishlist", "name": "WishList", "prefix": "/dashboard" },
+    { "to": "/support", "name": "Support" }
+  ],
+  "ROLE_MEMBER": [
+    { "to": "", "name": "Account Details", "prefix": "/dashboard" },
+    { "to": "/security", "name": "Account Security", "prefix": "/dashboard" },
+    { "to": "/address", "name": "Address", "prefix": "/dashboard" },
+    { "to": "/orders", "name": "Orders", "prefix": "/dashboard" },
+    { "to": "/wishlist", "name": "WishList", "prefix": "/dashboard" },
+    { "to": "/support", "name": "Support" }
+  ]
+}

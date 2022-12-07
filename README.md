@@ -1,119 +1,70 @@
-# MERN Ecommerce
+# Getting Started with Create React App
 
-## Description
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-An ecommerce store built with MERN stack, and utilizes third party API's. This ecommerce store enable three main different flows or implementations:
+## Available Scripts
 
-1. Buyers browse the store categories, products and brands
-2. Sellers or Merchants manage their own brand component
-3. Admins manage and control the entire store components 
+In the project directory, you can run:
 
+### `npm start`
 
-* features:
-  * Node provides the backend environment for this application
-  * Express middleware is used to handle requests, routes
-  * Mongoose schemas to model the application data
-  * React for displaying UI components
-  * Redux to manage application's state
-  * Redux Thunk middleware to handle asynchronous redux actions
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Database Seed
+### `npm test`
 
-* The seed command will create an admin user in the database
-* The email and password are passed with the command as arguments
-* Like below command, replace brackets with email and password. 
-* For more information, see code [here](server/utils/seed.js)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-npm run seed:db [email-***@****.com] [password-******] // This is just an example.
-```
+### `npm run build`
 
-## Demo
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-This application is deployed on Heroku. Please check it out :smile: [here](https://mern-store-80202.herokuapp.com/).
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-See admin dashboard [demo](https://mernstore-bucket.s3.us-east-2.amazonaws.com/admin.mp4)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Install
+### `npm run eject`
 
-Some basic Git commands are:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```
-$ git clone https://github.com/mohamedsamara/mern-ecommerce.git
-$ cd project
-$ npm install
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Setup
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-```
- Create .env file that include:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-  * MONGO_URI & JWT_SECRET
-  * PORT & BASE_SERVER_URL & BASE_API_URL & BASE_CLIENT_URL
-  * MAILCHIMP_KEY & MAILCHIMP_LIST_KEY => Mailchimp configuration
-  * MAILGUN_KEY & MAILGUN_DOMAIN & MAILGUN_EMAIL_SENDER => Mailgun configuration
-  * GOOGLE_CLIENT_ID & GOOGLE_CLIENT_SECRET & GOOGLE_CALLBACK_URL => Google Auth configuration
-  * FACEBOOK_CLIENT_ID & FACEBOOK_CLIENT_SECRET & FACEBOOK_CALLBACK_URL => Facebook Auth configuration
-  * AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY & AWS_REGION & AWS_BUCKET_NAME => AWS configuration
-```
+## Learn More
 
-## Heroku Deployment
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```
-> Create a Procfile in the root directory of your application with the following command **web: npm run start:production**
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Start development
+### Code Splitting
 
-```
-$ npm run dev
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Simple build for production
+### Analyzing the Bundle Size
 
-```
-$ npm run build
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## Run build for production
+### Making a Progressive Web App
 
-```
-$ npm start
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+### Advanced Configuration
 
-## Languages & tools
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-- [Node](https://nodejs.org/en/)
+### Deployment
 
-- [Express](https://expressjs.com/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- [Mongoose](https://mongoosejs.com/)
+### `npm run build` fails to minify
 
-- [React](https://reactjs.org/)
-
-- [Webpack](https://webpack.js.org/)
-
-
-### Code Formatter
-
-- Add a `.vscode` directory
-- Create a file `settings.json` inside `.vscode`
-- Install Prettier - Code formatter in VSCode
-- Add the following snippet:  
-
-```json
-
-    {
-      "editor.formatOnSave": true,
-      "prettier.singleQuote": true,
-      "prettier.arrowParens": "avoid",
-      "prettier.jsxSingleQuote": true,
-      "prettier.trailingComma": "none",
-      "javascript.preferences.quoteStyle": "single",
-    }
-
-```
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
