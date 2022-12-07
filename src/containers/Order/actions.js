@@ -41,7 +41,7 @@ export const fetchOrders = (page = 1) => {
     try {
       dispatch(setOrderLoading(true));
 
-      const response = await axios.get(`/api/order`, {
+      const response = await axios.get(`http://localhost:3000/api/order`, {
         params: {
           page: page ?? 1,
           limit: 20
@@ -73,7 +73,7 @@ export const fetchAccountOrders = (page = 1) => {
     try {
       dispatch(setOrderLoading(true));
 
-      const response = await axios.get(`/api/order/me`, {
+      const response = await axios.get(`http://localhost:3000/api/order/me`, {
         params: {
           page: page ?? 1,
           limit: 20
@@ -105,7 +105,7 @@ export const searchOrders = filter => {
     try {
       dispatch(setOrderLoading(true));
 
-      const response = await axios.get(`/api/order/search`, {
+      const response = await axios.get(`http://localhost:3000/api/order/search`, {
         params: {
           search: filter.value
         }
@@ -130,7 +130,7 @@ export const fetchOrder = (id, withLoading = true) => {
         dispatch(setOrderLoading(true));
       }
 
-      const response = await axios.get(`/api/order/${id}`);
+      const response = await axios.get(`http://localhost:3000/api/order/${id}`);
 
       dispatch({
         type: FETCH_ORDER,
@@ -151,7 +151,7 @@ export const cancelOrder = () => {
     try {
       const order = getState().order.order;
 
-      await axios.delete(`/api/order/cancel/${order._id}`);
+      await axios.delete(`http://localhost:3000/api/order/cancel/${order._id}`);
 
       dispatch(push(`/dashboard/orders`));
     } catch (error) {
@@ -165,7 +165,7 @@ export const updateOrderItemStatus = (itemId, status) => {
     try {
       const order = getState().order.order;
 
-      const response = await axios.put(`/api/order/status/item/${itemId}`, {
+      const response = await axios.put(`http://localhost:3000/api/order/status/item/${itemId}`, {
         orderId: order._id,
         cartId: order.cartId,
         status
@@ -198,7 +198,7 @@ export const addOrder = () => {
       const total = getState().cart.cartTotal;
 
       if (cartId) {
-        const response = await axios.post(`/api/order/add`, {
+        const response = await axios.post(`http://localhost:3000/api/order/add`, {
           cartId,
           total
         });

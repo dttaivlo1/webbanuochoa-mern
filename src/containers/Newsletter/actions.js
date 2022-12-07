@@ -41,7 +41,7 @@ export const subscribeToNewsletter = () => {
         return dispatch({ type: SET_NEWSLETTER_FORM_ERRORS, payload: errors });
       }
 
-      const response = await axios.post('/api/newsletter/subscribe', user);
+      const response = await axios.post('http://localhost:3000/api/newsletter/subscribe', user);
 
       const successfulOptions = {
         title: `${response.data.message}`,

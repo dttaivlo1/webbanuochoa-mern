@@ -56,7 +56,7 @@ export const login = () => {
     dispatch({ type: SET_LOGIN_LOADING, payload: true });
 
     try {
-      const response = await axios.post('/api/auth/login', user);
+      const response = await axios.post('http://localhost:3000/api/auth/login', user);
 
       const firstName = response.data.user.firstName;
 

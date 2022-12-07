@@ -14,7 +14,7 @@ export const updateWishlist = (isLiked, productId) => {
   return async (dispatch, getState) => {
     try {
       if (getState().authentication.authenticated === true) {
-        const response = await axios.post(`/api/wishlist`, {
+        const response = await axios.post(`http://localhost:3000/api/wishlist`, {
           isLiked,
           product: productId
         });
@@ -49,7 +49,7 @@ export const fetchWishlist = () => {
     try {
       dispatch({ type: SET_WISHLIST_LOADING, payload: true });
 
-      const response = await axios.get(`/api/wishlist`);
+      const response = await axios.get(`http://localhost:3000/api/wishlist`);
 
       dispatch({ type: FETCH_WISHLIST, payload: response.data.wishlist });
     } catch (error) {

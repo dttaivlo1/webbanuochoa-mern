@@ -86,7 +86,7 @@ export const filterProducts = (n, v) => {
       const sortOrder = getSortOrder(payload.order);
       payload = { ...payload, sortOrder };
 
-      const response = await axios.get(`/api/product/list`, {
+      const response = await axios.get(`http://localhost:3000/api/product/list`, {
         params: {
           ...payload
         }
@@ -122,7 +122,7 @@ export const fetchStoreProduct = slug => {
     dispatch(setProductLoading(true));
 
     try {
-      const response = await axios.get(`/api/product/item/${slug}`);
+      const response = await axios.get(`http://localhost:3000/api/product/item/${slug}`);
 
       const inventory = response.data.product.quantity;
       const product = { ...response.data.product, inventory };
@@ -144,7 +144,7 @@ export const fetchBrandProducts = slug => {
     try {
       dispatch(setProductLoading(true));
 
-      const response = await axios.get(`/api/product/list/brand/${slug}`);
+      const response = await axios.get(`http://localhost:3000/api/product/list/brand/${slug}`);
 
       const s = getState().product.advancedFilters;
       dispatch({
@@ -170,7 +170,7 @@ export const fetchBrandProducts = slug => {
 export const fetchProductsSelect = () => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/product/list/select`);
+      const response = await axios.get(`http://localhost:3000/api/product/list/select`);
 
       const formattedProducts = formatSelectOptions(response.data.products);
 
@@ -190,7 +190,7 @@ export const fetchProducts = () => {
     try {
       dispatch(setProductLoading(true));
 
-      const response = await axios.get(`/api/product`);
+      const response = await axios.get(`http://localhost:3000/api/product`);
 
       dispatch({
         type: FETCH_PRODUCTS,
@@ -208,7 +208,7 @@ export const fetchProducts = () => {
 export const fetchProduct = id => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/product/${id}`);
+      const response = await axios.get(`http://localhost:3000/api/product/${id}`);
 
       const inventory = response.data.product.quantity;
 
@@ -303,7 +303,7 @@ export const addProduct = () => {
         }
       }
 
-      const response = await axios.post(`/api/product/add`, formData, {
+      const response = await axios.post(`http://localhost:3000/api/product/add`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
@@ -382,7 +382,7 @@ export const updateProduct = () => {
         });
       }
 
-      const response = await axios.put(`/api/product/${product._id}`, {
+      const response = await axios.put(`http://localhost:3000/api/product/${product._id}`, {
         product: newProduct
       });
 
@@ -407,7 +407,7 @@ export const updateProduct = () => {
 export const activateProduct = (id, value) => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.put(`/api/product/${id}/active`, {
+      const response = await axios.put(`http://localhost:3000/api/product/${id}/active`, {
         product: {
           isActive: value
         }
@@ -432,7 +432,7 @@ export const activateProduct = (id, value) => {
 export const deleteProduct = id => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.delete(`/api/product/delete/${id}`);
+      const response = await axios.delete(`http://localhost:3000/api/product/delete/${id}`);
 
       const successfulOptions = {
         title: `${response.data.message}`,

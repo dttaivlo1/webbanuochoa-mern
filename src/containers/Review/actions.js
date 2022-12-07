@@ -37,7 +37,7 @@ export const fetchReviews = (n, v) => {
     try {
       dispatch({ type: SET_REVIEWS_LOADING, payload: true });
 
-      const response = await axios.get(`/api/review`, {
+      const response = await axios.get(`http://localhost:3000/api/review`, {
         params: {
           page: v ?? 1,
           limit: 20
@@ -62,7 +62,7 @@ export const fetchReviews = (n, v) => {
 export const approveReview = review => {
   return async (dispatch, getState) => {
     try {
-      await axios.put(`/api/review/approve/${review._id}`);
+      await axios.put(`http://localhost:3000/api/review/approve/${review._id}`);
 
       dispatch(fetchReviews());
     } catch (error) {
@@ -74,7 +74,7 @@ export const approveReview = review => {
 export const rejectReview = review => {
   return async (dispatch, getState) => {
     try {
-      await axios.put(`/api/review/reject/${review._id}`);
+      await axios.put(`http://localhost:3000/api/review/reject/${review._id}`);
 
       dispatch(fetchReviews());
     } catch (error) {
@@ -87,7 +87,7 @@ export const rejectReview = review => {
 export const deleteReview = id => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.delete(`/api/review/delete/${id}`);
+      const response = await axios.delete(`http://localhost:3000/api/review/delete/${id}`);
 
       const successfulOptions = {
         title: `${response.data.message}`,
@@ -112,7 +112,7 @@ export const deleteReview = id => {
 export const fetchProductReviews = slug => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/review/${slug}`);
+      const response = await axios.get(`http://localhost:3000/api/review/${slug}`);
 
       const { ratingSummary, totalRatings, totalReviews, totalSummary } =
         getProductReviewsSummary(response.data.reviews);
@@ -169,7 +169,7 @@ export const addProductReview = () => {
       }
 
       const santizedReview = santizeFields(newReview);
-      const response = await axios.post(`/api/review/add`, santizedReview);
+      const response = await axios.post(`http://localhost:3000/api/review/add`, santizedReview);
 
       const successfulOptions = {
         title: `${response.data.message}`,

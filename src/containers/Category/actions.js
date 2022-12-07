@@ -14,6 +14,7 @@ import {
   FETCH_CATEGORY,
   CATEGORY_CHANGE,
   CATEGORY_EDIT_CHANGE,
+  CATEGORY_SELECT,
   SET_CATEGORY_FORM_ERRORS,
   SET_CATEGORY_FORM_EDIT_ERRORS,
   ADD_CATEGORY,
@@ -63,7 +64,7 @@ export const resetCategory = () => {
 export const fetchStoreCategories = () => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/category/list`);
+      const response = await axios.get(`http://localhost:3000/api/category/list`);
 
       dispatch({
         type: FETCH_STORE_CATEGORIES,
@@ -80,7 +81,7 @@ export const fetchCategories = () => {
   return async (dispatch, getState) => {
     try {
       dispatch({ type: SET_CATEGORIES_LOADING, payload: true });
-      const response = await axios.get(`/api/category`);
+      const response = await axios.get(`http://localhost:3000/api/category`);
 
       dispatch({
         type: FETCH_CATEGORIES,
@@ -98,7 +99,7 @@ export const fetchCategories = () => {
 export const fetchCategory = id => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.get(`/api/category/${id}`);
+      const response = await axios.get(`http://localhost:3000/api/category/${id}`);
 
       response.data.category.products = formatSelectOptions(
         response.data.category.products
@@ -144,7 +145,7 @@ export const addCategory = () => {
         return dispatch({ type: SET_CATEGORY_FORM_ERRORS, payload: errors });
       }
 
-      const response = await axios.post(`/api/category/add`, newCategory);
+      const response = await axios.post(`http://localhost:3000/api/category/add`, newCategory);
 
       const successfulOptions = {
         title: `${response.data.message}`,
@@ -205,7 +206,7 @@ export const updateCategory = () => {
         });
       }
 
-      const response = await axios.put(`/api/category/${category._id}`, {
+      const response = await axios.put(`http://localhost:3000/api/category/${category._id}`, {
         category: newCategory
       });
 
@@ -230,7 +231,7 @@ export const updateCategory = () => {
 export const activateCategory = (id, value) => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.put(`/api/category/${id}/active`, {
+      const response = await axios.put(`http://localhost:3000/api/category/${id}/active`, {
         category: {
           isActive: value
         }
@@ -255,7 +256,7 @@ export const activateCategory = (id, value) => {
 export const deleteCategory = id => {
   return async (dispatch, getState) => {
     try {
-      const response = await axios.delete(`/api/category/delete/${id}`);
+      const response = await axios.delete(`http://localhost:3000/api/category/delete/${id}`);
 
       const successfulOptions = {
         title: `${response.data.message}`,

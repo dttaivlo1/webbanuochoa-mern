@@ -43,7 +43,7 @@ export const forgotPassowrd = () => {
         });
       }
 
-      const response = await axios.post('/api/auth/forgot', user);
+      const response = await axios.post('http://localhost:3000/api/auth/forgot', user);
       const successfulOptions = {
         title: `${response.data.message}`,
         position: 'tr',

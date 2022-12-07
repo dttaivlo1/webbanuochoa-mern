@@ -159,7 +159,7 @@ export const getCartId = () => {
 
       // create cart id if there is no one
       if (!cartId) {
-        const response = await axios.post(`/api/cart/add`, { products });
+        const response = await axios.post(`http://localhost:3000/api/cart/add`, { products });
 
         dispatch(setCartId(response.data.cartId));
       }

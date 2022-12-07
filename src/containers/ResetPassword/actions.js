@@ -54,7 +54,7 @@ export const resetPassword = token => {
         });
       }
 
-      const response = await axios.post(`/api/auth/reset/${token}`, user);
+      const response = await axios.post(`http://localhost:3000/api/auth/reset/${token}`, user);
       const successfulOptions = {
         title: `${response.data.message}`,
         position: 'tr',
@@ -98,7 +98,7 @@ export const resetAccountPassword = () => {
         });
       }
 
-      const response = await axios.post(`/api/auth/reset`, user);
+      const response = await axios.post(`http://localhost:3000/api/auth/reset`, user);
       const successfulOptions = {
         title: `${response.data.message}`,
         position: 'tr',

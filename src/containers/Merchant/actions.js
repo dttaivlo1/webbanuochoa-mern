@@ -95,7 +95,7 @@ export const addMerchant = (isBack = false) => {
       dispatch(setMerchantLoading(true));
       dispatch(setMerchantSubmitting(true));
 
-      const response = await axios.post('/api/merchant/add', merchant);
+      const response = await axios.post('http://localhost:3000/api/merchant/add', merchant);
 
       const successfulOptions = {
         title: `${response.data.message}`,
@@ -122,7 +122,7 @@ export const fetchMerchants = (n, v) => {
     try {
       dispatch(setMerchantLoading(true));
 
-      const response = await axios.get(`/api/merchant`, {
+      const response = await axios.get(`http://localhost:3000/api/merchant`, {
         params: {
           page: v ?? 1,
           limit: 20
@@ -153,7 +153,7 @@ export const searchMerchants = filter => {
     try {
       dispatch(setMerchantLoading(true));
 
-      const response = await axios.get(`/api/merchant/search`, {
+      const response = await axios.get(`http://localhost:3000/api/merchant/search`, {
         params: {
           search: filter.value
         }
@@ -174,7 +174,7 @@ export const searchMerchants = filter => {
 export const disableMerchant = (merchant, value, search, page) => {
   return async (dispatch, getState) => {
     try {
-      await axios.put(`/api/merchant/${merchant._id}/active`, {
+      await axios.put(`http://localhost:3000/api/merchant/${merchant._id}/active`, {
         merchant: {
           isActive: value
         }
@@ -192,7 +192,7 @@ export const disableMerchant = (merchant, value, search, page) => {
 export const approveMerchant = (merchant, search, page) => {
   return async (dispatch, getState) => {
     try {
-      await axios.put(`/api/merchant/approve/${merchant._id}`);
+      await axios.put(`http://localhost:3000/api/merchant/approve/${merchant._id}`);
 
       if (search)
         return dispatch(searchMerchants({ name: 'merchant', value: search })); // update search list if this is a search result
@@ -206,7 +206,7 @@ export const approveMerchant = (merchant, search, page) => {
 export const rejectMerchant = (merchant, search, page) => {
   return async (dispatch, getState) => {
     try {
-      await axios.put(`/api/merchant/reject/${merchant._id}`);
+      await axios.put(`http://localhost:3000/api/merchant/reject/${merchant._id}`);
 
       if (search)
         return dispatch(searchMerchants({ name: 'merchant', value: search })); // update search list if this is a search result
@@ -240,7 +240,7 @@ export const merchantSignUp = token => {
         return dispatch({ type: SET_SIGNUP_FORM_ERRORS, payload: errors });
       }
 
-      await axios.post(`/api/merchant/signup/${token}`, merchant);
+      await axios.post(`http://localhost:3000/api/merchant/signup/${token}`, merchant);
 
       const successfulOptions = {
         title: `You have signed up successfully! Please sign in with the email and password. Thank you!`,
@@ -264,7 +264,7 @@ export const deleteMerchant = (merchant, search, page) => {
   return async (dispatch, getState) => {
     try {
       const response = await axios.delete(
-        `/api/merchant/delete/${merchant._id}`
+        `http://localhost:3000/api/merchant/delete/${merchant._id}`
       );
 
       const successfulOptions = {
