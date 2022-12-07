@@ -42,6 +42,7 @@ class OrderSuccess extends React.PureComponent {
               <Link
                 to={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/containers/OrderSuccess/index.js
                   pathname: '/order/${order._id}?success'
                   
@@ -49,6 +50,10 @@ class OrderSuccess extends React.PureComponent {
                   pathname: `/order/${order._id}?success`,
                   state: { prevPath: location.pathname }
 >>>>>>> parent of 443d7b5a (re create application):client/app/containers/OrderSuccess/index.js
+=======
+                  pathname: `/order/${order._id}?success`,
+                  state: { prevPath: location.pathname }
+>>>>>>> parent of 443d7b5a (re create application)
 =======
                   pathname: `/order/${order._id}?success`,
                   state: { prevPath: location.pathname }

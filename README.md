@@ -10,11 +10,13 @@ An ecommerce store built with MERN stack, and utilizes third party API's. This e
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### 'npm start'
 =======
 >>>>>>> parent of 443d7b5a (re create application)
 =======
 >>>>>>> parent of 443d7b5a (re create application)
+=======
 >>>>>>> parent of 443d7b5a (re create application)
 
 * features:
@@ -26,6 +28,7 @@ An ecommerce store built with MERN stack, and utilizes third party API's. This e
   * Redux Thunk middleware to handle asynchronous redux actions
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ### 'npm test'

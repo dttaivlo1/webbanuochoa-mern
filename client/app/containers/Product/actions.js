@@ -87,11 +87,15 @@ export const filterProducts = (n, v) => {
       payload = { ...payload, sortOrder };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/containers/Product/actions.js
       const response = await axios.get( process.env.BASE_SERVER_URL+'http://localhost:3000/api/product/list', {
 =======
       const response = await axios.get(`/api/product/list`, {
 >>>>>>> parent of 443d7b5a (re create application):client/app/containers/Product/actions.js
+=======
+      const response = await axios.get(`/api/product/list`, {
+>>>>>>> parent of 443d7b5a (re create application)
 =======
       const response = await axios.get(`/api/product/list`, {
 >>>>>>> parent of 443d7b5a (re create application)
