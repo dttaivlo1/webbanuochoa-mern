@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import {  Switch,  Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 
 import actions from '../../actions';
 import { ROLE_ADMIN } from '../../constants';
