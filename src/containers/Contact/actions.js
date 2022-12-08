@@ -37,10 +37,10 @@ export const contactUs = () => {
       const contact = getState().contact.contactFormData;
 
       const { isValid, errors } = allFieldsValidation(contact, rules, {
-        'required.name': 'Name is required.',
-        'required.email': 'Email is required.',
+        'required.name': 'Name Không được bỏ trống.',
+        'required.email': 'Email Không được bỏ trống.',
         'email.email': 'Email format is invalid.',
-        'required.message': 'Message is required.',
+        'required.message': 'Message Không được bỏ trống.',
         'min.message': 'Message must be at least 10 characters.'
       });
 

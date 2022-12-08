@@ -42,9 +42,9 @@ export const login = () => {
     const user = getState().login.loginFormData;
 
     const { isValid, errors } = allFieldsValidation(user, rules, {
-      'required.email': 'Email is required.',
+      'required.email': 'Email Không được bỏ trống.',
       'email.email': 'Email format is invalid.',
-      'required.password': 'Password is required.',
+      'required.password': 'Password Không được bỏ trống.',
       'min.password': 'Password must be at least 6 characters.'
     });
 

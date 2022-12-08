@@ -95,10 +95,10 @@ const AddProduct = props => {
             <Input
               type={'number'}
               error={formErrors['price']}
-              label={'Price'}
+              label={'GIá'}
               name={'price'}
               min={1}
-              placeholder={'Product Price'}
+              placeholder={'Giá'}
               value={productFormData.price}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -159,7 +159,7 @@ const AddProduct = props => {
         </Row>
         <hr />
         <div className='add-product-actions'>
-          <Button type='submit' text='Add Product' />
+          <Button type='submit' text='Thêm Sản Phẩm' />
         </div>
       </form>
     </div>

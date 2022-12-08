@@ -128,7 +128,7 @@ class Navigation extends React.PureComponent {
     } = this.props;
 
     const inputProps = {
-      placeholder: 'Search Products',
+      placeholder: 'Tìm Kiếm Sản Phẩm...',
       value: searchValue,
       onChange: (_, { newValue }) => {
         onSearch(newValue);
@@ -142,15 +142,15 @@ class Navigation extends React.PureComponent {
             <Row>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-truck' />
-                <span>Free Shipping</span>
+                <span>Miễn Phí Vận Chuyển *</span>
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-credit-card' />
-                <span>Payment Methods</span>
+                <span>Thanh Toán Đa Dạng</span>
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-phone' />
-                <span>Call us 951-999-9999</span>
+                <span>Hotline: 09009 345 09</span>
               </Col>
               <Col xs='12' className='text-center d-block d-md-none'>
                 <i className='fa fa-phone' />
@@ -180,7 +180,7 @@ class Navigation extends React.PureComponent {
                   />
                 )}
                 <Link to='/'>
-                  <h1 className='logo'>MERN Store</h1>
+                  <h1 className='logo' >TMDTperfume</h1>
                 </Link>
               </div>
             </Col>
@@ -243,7 +243,7 @@ class Navigation extends React.PureComponent {
                       isOpen={isBrandOpen}
                     >
                       <DropdownToggle nav>
-                        Brands
+                        Nhãn Hàng
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right className='nav-brand-dropdown'>
@@ -262,7 +262,7 @@ class Navigation extends React.PureComponent {
                       to='/shop'
                       activeClassName='active'
                     >
-                      Shop
+                      Sản phẩm
                     </NavLink>
                   </NavItem>
                   {authenticated ? (
@@ -277,21 +277,21 @@ class Navigation extends React.PureComponent {
                         >
                           Dashboard
                         </DropdownItem>
-                        <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
+                        <DropdownItem onClick={signOut}>Đăng Xuất</DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   ) : (
                     <UncontrolledDropdown nav inNavbar>
                       <DropdownToggle nav>
-                        Welcome!
+                      Xin Chào!
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right>
                         <DropdownItem onClick={() => history.push('/login')}>
-                          Login
+                         Đăng Nhập
                         </DropdownItem>
                         <DropdownItem onClick={() => history.push('/register')}>
-                          Sign Up
+                         Đăng Kí
                         </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>

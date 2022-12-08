@@ -33,7 +33,7 @@ export const forgotPassowrd = () => {
       const user = getState().forgotPassword.forgotFormData;
 
       const { isValid, errors } = allFieldsValidation(user, rules, {
-        'required.email': 'Email is required.'
+        'required.email': 'Email Không được bỏ trống.'
       });
 
       if (!isValid) {

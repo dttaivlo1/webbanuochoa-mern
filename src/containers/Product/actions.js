@@ -273,18 +273,18 @@ export const addProduct = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules, {
-        'required.sku': 'Sku is required.',
+        'required.sku': 'Sku Không được bỏ trống.',
         'alpha_dash.sku':
           'Sku may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.name': 'Name is required.',
-        'required.description': 'Description is required.',
+        'required.name': 'Name Không được bỏ trống.',
+        'required.description': 'Description Không được bỏ trống.',
         'max.description':
           'Description may not be greater than 200 characters.',
-        'required.quantity': 'Quantity is required.',
-        'required.price': 'Price is required.',
-        'required.taxable': 'Taxable is required.',
+        'required.quantity': 'Quantity Không được bỏ trống.',
+        'required.price': 'Price Không được bỏ trống.',
+        'required.taxable': 'Taxable Không được bỏ trống.',
         'required.image': 'Please upload files with jpg, jpeg, png format.',
-        'required.brand': 'Brand is required.'
+        'required.brand': 'Brand Không được bỏ trống.'
       });
 
       if (!isValid) {
@@ -359,20 +359,20 @@ export const updateProduct = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules, {
-        'required.name': 'Name is required.',
-        'required.sku': 'Sku is required.',
+        'required.name': 'Name Không được bỏ trống.',
+        'required.sku': 'Sku Không được bỏ trống.',
         'alpha_dash.sku':
           'Sku may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.slug': 'Slug is required.',
+        'required.slug': 'Slug Không được bỏ trống.',
         'alpha_dash.slug':
           'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.description': 'Description is required.',
+        'required.description': 'Description Không được bỏ trống.',
         'max.description':
           'Description may not be greater than 200 characters.',
-        'required.quantity': 'Quantity is required.',
-        'required.price': 'Price is required.',
-        'required.taxable': 'Taxable is required.',
-        'required.brand': 'Brand is required.'
+        'required.quantity': 'Quantity Không được bỏ trống.',
+        'required.price': 'Price Không được bỏ trống.',
+        'required.taxable': 'Taxable Không được bỏ trống.',
+        'required.brand': 'Brand Không được bỏ trống.'
       });
 
       if (!isValid) {

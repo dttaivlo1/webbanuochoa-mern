@@ -41,9 +41,9 @@ const AccountDetails = props => {
           <Col xs='12' md='6'>
             <Input
               type={'text'}
-              label={'First Name'}
+              label={'Tên'}
               name={'firstName'}
-              placeholder={'Please Enter Your First Name'}
+              placeholder={'Tên Lót và Tên'}
               value={user.firstName ? user.firstName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -90,7 +90,7 @@ const AccountDetails = props => {
         </Row>
         <hr />
         <div className='profile-actions'>
-          <Button type='submit' variant='secondary' text='Save changes' />
+          <Button type='submit' variant='secondary' text='Lưu Lại' />
         </div>
       </form>
     </div>

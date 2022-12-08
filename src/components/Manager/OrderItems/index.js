@@ -18,11 +18,11 @@ const OrderItems = props => {
 
   const renderPopoverContent = item => {
     const statuses = [
-      'Not processed',
-      'Processing',
-      'Shipped',
-      'Delivered',
-      'Cancelled'
+      'Chờ xác nhận',
+      'Đang Đóng Gói',
+      'Đang Vận Chuyển',
+      'Đã Giao Hàng',
+      'Đã Huỷ'
     ];
 
     return (
@@ -50,7 +50,7 @@ const OrderItems = props => {
           className='btn-link text-center py-2 fs-12'
           style={{ minWidth: 120 }}
         >
-          Reivew Product
+          Đánh Giá
         </Link>
       );
     } else if (item.status !== 'Cancelled') {
@@ -63,7 +63,7 @@ const OrderItems = props => {
                 variant='danger'
                 id='CancelOrderItemPopover'
                 size='sm'
-                text='Confirm Cancel'
+                text='Xác Nhận Huỷ'
                 role='menuitem'
                 className='cancel-order-btn'
                 onClick={() => updateOrderItemStatus(item._id, 'Cancelled')}
@@ -86,7 +86,7 @@ const OrderItems = props => {
 
   return (
     <div className='order-items pt-3'>
-      <h2>Order Items</h2>
+      <h2>Danh Sách hàng hoá</h2>
       <Row>
         {order.products.map((item, index) => (
           <Col xs='12' key={index} className='item'>
@@ -115,26 +115,26 @@ const OrderItems = props => {
                           </Link>
                           <div className='d-flex align-items-center justify-content-between'>
                             <span className='price'>
-                              ${item.purchasePrice || item.product.price}
+                              {item.purchasePrice || item.product.price} VNĐ
                             </span>
                           </div>
                         </>
                       ) : (
-                        <h4>Not Available</h4>
+                        <h4>Hiện Không khả dụng</h4>
                       )}
                     </div>
                     <div className='d-flex justify-content-between flex-wrap d-md-none mt-1'>
                       <p className='mb-1 mr-4'>
-                        Status
+                        Trạng Thái
                         <span className='order-label order-status'>{` ${item.status}`}</span>
                       </p>
                       <p className='mb-1 mr-4'>
-                        Quantity
+                       Số Lượng
                         <span className='order-label'>{` ${item.quantity}`}</span>
                       </p>
                       <p>
-                        Total Price
-                        <span className='order-label'>{` $${item.totalPrice}`}</span>
+                        Tổng tiền Sản Phẩm
+                        <span className='order-label'>{` ${item.totalPrice} VND`}</span>
                       </p>
                     </div>
                   </div>
@@ -143,18 +143,18 @@ const OrderItems = props => {
                 <div className='d-none d-md-flex justify-content-between align-items-center box'>
                   <div className='text-center'>
                     <p className='order-label order-status'>{`${item.status}`}</p>
-                    <p>Status</p>
+                    <p>Trạng Thái</p>
                   </div>
 
                   <div className='text-center'>
                     <p className='order-label'>{` ${item.quantity}`}</p>
-                    <p>Quantity</p>
+                    <p>Số Lượng</p>
                   </div>
 
                   <div className='text-center'>
-                    <p className='order-label'>{` $${item.totalPrice}`}</p>
+                    <p className='order-label'>{` ${item.totalPrice} VNĐ`}</p>
 
-                    <p>Total Price</p>
+                    <p>Tổng Tiền</p>
                   </div>
                 </div>
               </div>

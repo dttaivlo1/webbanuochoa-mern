@@ -51,10 +51,10 @@ export const signUp = () => {
       const isSubscribed = getState().signup.isSubscribed;
 
       const { isValid, errors } = allFieldsValidation(newUser, rules, {
-        'required.email': 'Email is required.',
-        'required.password': 'Password is required.',
-        'required.firstName': 'First Name is required.',
-        'required.lastName': 'Last Name is required.'
+        'required.email': 'Email Không được bỏ trống.',
+        'required.password': 'Password Không được bỏ trống.',
+        'required.firstName': 'First Name Không được bỏ trống.',
+        'required.lastName': 'Last Name Không được bỏ trống.'
       });
 
       if (!isValid) {

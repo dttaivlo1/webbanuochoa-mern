@@ -37,7 +37,7 @@ class Radio extends React.Component {
                 checked={this.state.size === "Newest First"}
                 onChange={this.handleChange}
               />
-              Newest First
+              Mới Nhất
             </label>
           </li>
 
@@ -50,7 +50,7 @@ class Radio extends React.Component {
                 checked={this.state.size === "Price High to Low"}
                 onChange={this.handleChange}
               />
-              Price High to Low
+              Giá Cao Đên Thấp
             </label>
           </li>
 
@@ -63,7 +63,7 @@ class Radio extends React.Component {
                 checked={this.state.size === "Price Low to High"}
                 onChange={this.handleChange}
               />
-              Price Low to High
+             Giá Thấp Đến Cao
             </label>
           </li>
         </ul>

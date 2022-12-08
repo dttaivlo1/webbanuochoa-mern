@@ -38,13 +38,13 @@ export const resetPassword = token => {
       const user = getState().resetPassword.resetFormData;
 
       const { isValid, errors } = allFieldsValidation(user, rules, {
-        'required.password': 'Password is required.',
+        'required.password': 'Password Không được bỏ trống.',
         'min.password': 'Password must be at least 6 characters.',
-        'required.confirmPassword': 'Confirm password is required.',
+        'required.confirmPassword': 'Mật khẩu mới Không được bỏ trống.',
         'min.confirmPassword':
-          'Confirm password must be at least 6 characters.',
+          'Mật khẩu mới must be at least 6 characters.',
         'same.confirmPassword':
-          'Confirm password and password fields must match.'
+          'Mật khẩu mới and password fields must match.'
       });
 
       if (!isValid) {
@@ -85,10 +85,10 @@ export const resetAccountPassword = () => {
       const user = getState().resetPassword.resetFormData;
 
       const { isValid, errors } = allFieldsValidation(user, rules, {
-        'required.password': 'Password is required.',
+        'required.password': 'Password Không được bỏ trống.',
         'min.password': 'Password must be at least 6 characters.',
-        'required.confirmPassword': 'Confirm password is required.',
-        'min.confirmPassword': 'Confirm password must be at least 6 characters.'
+        'required.confirmPassword': 'Mật khẩu mới Không được bỏ trống.',
+        'min.confirmPassword': 'Mật khẩu mới must be at least 6 characters.'
       });
 
       if (!isValid) {

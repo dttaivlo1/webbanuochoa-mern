@@ -118,10 +118,10 @@ const EditProduct = props => {
             <Input
               type={'number'}
               error={formErrors['price']}
-              label={'Price'}
+              label={'Giá'}
               name={'price'}
               min={1}
-              placeholder={'Product Price'}
+              placeholder={'Giá' }
               value={product.price}
               onInputChange={(name, value) => {
                 productChange(name, value);

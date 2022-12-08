@@ -78,13 +78,13 @@ export const addMerchant = (isBack = false) => {
       const merchant = getState().merchant.merchantFormData;
 
       const { isValid, errors } = allFieldsValidation(merchant, rules, {
-        'required.name': 'Name is required.',
-        'required.email': 'Email is required.',
+        'required.name': 'Name Không được bỏ trống.',
+        'required.email': 'Email Không được bỏ trống.',
         'email.email': 'Email format is invalid.',
-        'required.phoneNumber': 'Phone number is required.',
+        'required.phoneNumber': 'Phone number Không được bỏ trống.',
         'regex.phoneNumber': 'Phone number format is invalid.',
-        'required.brand': 'Brand is required.',
-        'required.business': 'Business is required.',
+        'required.brand': 'Brand Không được bỏ trống.',
+        'required.business': 'Business Không được bỏ trống.',
         'min.business': 'Business must be at least 10 characters.'
       });
 
@@ -230,10 +230,10 @@ export const merchantSignUp = token => {
       const merchant = getState().merchant.signupFormData;
 
       const { isValid, errors } = allFieldsValidation(merchant, rules, {
-        'required.email': 'Email is required.',
-        'required.password': 'Password is required.',
-        'required.firstName': 'First Name is required.',
-        'required.lastName': 'Last Name is required.'
+        'required.email': 'Email Không được bỏ trống.',
+        'required.password': 'Password Không được bỏ trống.',
+        'required.firstName': 'First Name Không được bỏ trống.',
+        'required.lastName': 'Last Name Không được bỏ trống.'
       });
 
       if (!isValid) {
@@ -243,7 +243,7 @@ export const merchantSignUp = token => {
       await axios.post(`http://localhost:3000/api/merchant/signup/${token}`, merchant);
 
       const successfulOptions = {
-        title: `You have signed up successfully! Please sign in with the email and password. Thank you!`,
+        title: `Bạn đã đăng kí thành công, vui lòng đăng nhập. Xin cảm ơn!`,
         position: 'tr',
         autoDismiss: 1
       };

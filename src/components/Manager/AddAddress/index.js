@@ -103,7 +103,7 @@ const AddAddress = props => {
         </Row>
         <hr />
         <div className='add-address-actions'>
-          <Button type='submit' text='Add Address' />
+          <Button type='submit' text='Thêm Địa Chỉ' />
         </div>
       </form>
     </div>

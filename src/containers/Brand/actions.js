@@ -129,8 +129,8 @@ export const addBrand = () => {
       const brand = getState().brand.brandFormData;
 
       const { isValid, errors } = allFieldsValidation(brand, rules, {
-        'required.name': 'Name is required.',
-        'required.description': 'Description is required.',
+        'required.name': 'Name Không được bỏ trống.',
+        'required.description': 'Description Không được bỏ trống.',
         'max.description': 'Description may not be greater than 200 characters.'
       });
 
@@ -181,11 +181,11 @@ export const updateBrand = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newBrand, rules, {
-        'required.name': 'Name is required.',
-        'required.slug': 'Slug is required.',
+        'required.name': 'Name Không được bỏ trống.',
+        'required.slug': 'Slug Không được bỏ trống.',
         'alpha_dash.slug':
           'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.description': 'Description is required.',
+        'required.description': 'Description Không được bỏ trống.',
         'max.description': 'Description may not be greater than 200 characters.'
       });
 

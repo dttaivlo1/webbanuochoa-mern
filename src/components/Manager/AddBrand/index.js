@@ -62,7 +62,7 @@ const AddBrand = props => {
         </Row>
         <hr />
         <div className='add-brand-actions'>
-          <Button type='submit' text='Add Brand' />
+          <Button type='submit' text='Thêm Nhãn Hàng' />
         </div>
       </form>
     </div>

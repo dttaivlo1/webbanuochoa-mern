@@ -33,7 +33,7 @@ export const subscribeToNewsletter = () => {
       user.email = getState().newsletter.email;
 
       const { isValid, errors } = allFieldsValidation(user, rules, {
-        'required.email': 'Email is required.',
+        'required.email': 'Email Không được bỏ trống.',
         'email.email': 'Email format is invalid.'
       });
 

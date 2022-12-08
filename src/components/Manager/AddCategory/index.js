@@ -81,7 +81,7 @@ const AddCategory = props => {
         </Row>
         <hr />
         <div className='add-category-actions'>
-          <Button type='submit' text='Add Category' />
+          <Button type='submit' text='Thêm Danh Mục' />
         </div>
       </form>
     </div>

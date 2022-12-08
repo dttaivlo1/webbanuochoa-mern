@@ -58,7 +58,7 @@ const ResetPasswordForm = props => {
         </Row>
         <hr />
         <div className='reset-actions'>
-          <Button type='submit' text='Reset Password' />
+          <Button type='submit' text='Thay đổi mật khẩu' />
         </div>
       </form>
     </div>
