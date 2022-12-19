@@ -107,7 +107,7 @@ class ProductPage extends React.PureComponent {
                       <Input
                         type={'number'}
                         error={shopFormErrors['quantity']}
-                        label={'Quantity'}
+                        label={'Số lượng'}
                         name={'quantity'}
                         decimals={false}
                         min={1}

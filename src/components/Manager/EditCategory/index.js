@@ -44,7 +44,7 @@ const EditCategory = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'Tên'}
               name={'name'}
               placeholder={'Category Name'}
               value={category.name}
@@ -70,7 +70,7 @@ const EditCategory = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Description'}
+              label={'Mô tả'}
               name={'description'}
               placeholder={'Category Description'}
               value={category.description}

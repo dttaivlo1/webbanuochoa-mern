@@ -34,7 +34,7 @@ class Contact extends React.PureComponent {
               <Input
                 type={'text'}
                 error={formErrors['name']}
-                label={'Name'}
+                label={'Tên'}
                 name={'name'}
                 placeholder={'You Full Name'}
                 value={contactFormData.name}

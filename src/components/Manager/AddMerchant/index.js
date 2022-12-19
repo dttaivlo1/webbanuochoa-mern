@@ -34,7 +34,7 @@ const AddMerchant = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'Tên'}
               name={'name'}
               placeholder={'Your Full Name'}
               value={merchantFormData.name}

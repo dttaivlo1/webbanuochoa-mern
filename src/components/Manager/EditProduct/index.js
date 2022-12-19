@@ -52,7 +52,7 @@ const EditProduct = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'Tên'}
               name={'name'}
               placeholder={'Product Name'}
               value={product.name}
@@ -91,7 +91,7 @@ const EditProduct = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Description'}
+              label={'Mô tả'}
               name={'description'}
               placeholder={'Product Description'}
               value={product.description}
@@ -104,7 +104,7 @@ const EditProduct = props => {
             <Input
               type={'number'}
               error={formErrors['quantity']}
-              label={'Quantity'}
+              label={'Số lượng'}
               name={'quantity'}
               decimals={false}
               placeholder={'Product Quantity'}

@@ -28,7 +28,7 @@ const AddBrand = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'Tên'}
               name={'name'}
               placeholder={'Brand Name'}
               value={brandFormData.name}
@@ -41,7 +41,7 @@ const AddBrand = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Description'}
+              label={'Mô tả'}
               name={'description'}
               placeholder={'Brand Description'}
               value={brandFormData.description}
