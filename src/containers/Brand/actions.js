@@ -123,7 +123,7 @@ export const addBrand = () => {
     try {
       const rules = {
         name: 'required',
-        description: 'required|max:200'
+        description: 'required|max:1000'
       };
 
       const brand = getState().brand.brandFormData;
@@ -169,7 +169,7 @@ export const updateBrand = () => {
       const rules = {
         name: 'required',
         slug: 'required|alpha_dash',
-        description: 'required|max:200'
+        description: 'required|max:1000'
       };
 
       const brand = getState().brand.brand;

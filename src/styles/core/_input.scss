@@ -4,6 +4,7 @@ input[type='number'],
 input[type='password'],
 input[type='file'],
 textarea {
+  margin-left: 20px;
   width: 100%;
   padding: 8px 10px;
   border: $border-default;

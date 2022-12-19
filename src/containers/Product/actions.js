@@ -241,7 +241,7 @@ export const addProduct = () => {
       const rules = {
         sku: 'required|alpha_dash',
         name: 'required',
-        description: 'required|max:200',
+        description: 'required|max:1000',
         quantity: 'required|numeric',
         price: 'required|numeric',
         taxable: 'required',
@@ -336,7 +336,7 @@ export const updateProduct = () => {
         name: 'required',
         sku: 'required|alpha_dash',
         slug: 'required|alpha_dash',
-        description: 'required|max:200',
+        description: 'required|max:1000',
         quantity: 'required|numeric',
         price: 'required|numeric',
         taxable: 'required',

@@ -42,9 +42,9 @@ class OrderSuccess extends React.PureComponent {
               <Link
                 to={{
                   pathname: `/order/${order._id}?success`,
-               //   state: { prevPath: location.pathname }
+                  state: { prevPath: window.location.pathname }
                 }}
-                // to={`/order/${order._id}?success`}
+                 to={`/order/${order._id}?success`}
                 className='order-label'
               >
                 #{order._id}

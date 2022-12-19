@@ -121,7 +121,7 @@ export const addCategory = () => {
     try {
       const rules = {
         name: 'required',
-        description: 'required|max:200',
+        description: 'required|max:1000',
         products: 'required'
       };
 
@@ -175,7 +175,7 @@ export const updateCategory = () => {
       const rules = {
         name: 'required',
         slug: 'required|alpha_dash',
-        description: 'required|max:200',
+        description: 'required|max:1000',
         products: 'required'
       };
 
