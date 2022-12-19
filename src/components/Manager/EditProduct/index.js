@@ -122,7 +122,7 @@ const EditProduct = props => {
               name={'price'}
               min={1}
               placeholder={'Giá' }
-              value={product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}
+              value={product.price}
               onInputChange={(name, value) => {
                 productChange(name, value);
               }}
