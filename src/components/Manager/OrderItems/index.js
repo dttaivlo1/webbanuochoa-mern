@@ -115,7 +115,7 @@ const OrderItems = props => {
                           </Link>
                           <div className='d-flex align-items-center justify-content-between'>
                             <span className='price'>
-                              {item.purchasePrice || item.product.price} VNĐ
+                              {item.purchasePrice || item.product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})} VNĐ
                             </span>
                           </div>
                         </>

@@ -31,7 +31,7 @@ import { toggleCart } from '../Navigation/actions';
 export const handleAddToCart = product => {
   return (dispatch, getState) => {
     product.quantity = Number(getState().product.productShopData.quantity);
-    product.totalPrice = product.quantity * product.price;
+    product.totalPrice = product.quantity * product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'});
     product.totalPrice = parseFloat(product.totalPrice.toFixed(2));
     const inventory = getState().product.storeProduct.inventory;
 

@@ -259,7 +259,7 @@ export const addProduct = () => {
         sku: product.sku,
         name: product.name,
         description: product.description,
-        price: product.price,
+        price: product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}),
         quantity: product.quantity,
         image: product.image,
         isActive: product.isActive,
@@ -353,7 +353,7 @@ export const updateProduct = () => {
         slug: product.slug,
         description: product.description,
         quantity: product.quantity,
-        price: product.price,
+        price: product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}),
         taxable: product.taxable,
         brand: brand != 0 ? brand : null
       };

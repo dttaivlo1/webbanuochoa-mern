@@ -22,7 +22,7 @@ class RangeSlider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sliderValue: 50,
+      sliderValue: 100000,
       rangeValue: this.props.defaultValue
     };
   }
