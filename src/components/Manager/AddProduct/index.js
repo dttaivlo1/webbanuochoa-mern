@@ -108,7 +108,7 @@ const AddProduct = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['taxable']}
-              label={'Taxable'}
+              label={' '}
               name={'taxable'}
               options={taxableSelect}
               value={productFormData.taxable}
@@ -122,7 +122,7 @@ const AddProduct = props => {
               disabled={user.role === 'ROLE_MERCHANT'}
               error={formErrors['brand']}
               name={'brand'}
-              label={'Select Brand'}
+              label={'Chọn nhãn hiệu'}
               value={
                 user.role === 'ROLE_MERCHANT'
                   ? brands[1]

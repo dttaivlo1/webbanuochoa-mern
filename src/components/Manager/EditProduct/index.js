@@ -131,7 +131,7 @@ const EditProduct = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['taxable']}
-              label={'Taxable'}
+              label={' '}
               multi={false}
               name={'taxable'}
               value={[product.taxable ? taxableSelect[0] : taxableSelect[1]]}
@@ -145,7 +145,7 @@ const EditProduct = props => {
             <Col xs='12' md='12'>
               <SelectOption
                 error={formErrors['brand']}
-                label={'Select Brand'}
+                label={'Chọn nhãn hiệu'}
                 multi={false}
                 value={product.brand}
                 options={brands}
