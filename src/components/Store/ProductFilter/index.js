@@ -85,7 +85,7 @@ const ProductFilter = props => {
   return (
     <div className='product-filter'>
       <Card className='mb-4'>
-        <CardHeader tag='h3'>Price</CardHeader>
+        <CardHeader tag='h3'>Số lượng</CardHeader>
         <CardBody>
           <div className='mx-2 mb-3'>
             <RangeSlider
@@ -100,7 +100,7 @@ const ProductFilter = props => {
         </CardBody>
       </Card>
       <Card>
-        <CardHeader tag='h3'>Rating</CardHeader>
+        <CardHeader tag='h3'>Đánh giá</CardHeader>
         <CardBody>
           <div className='mx-2 mb-4'>
             <RangeSlider

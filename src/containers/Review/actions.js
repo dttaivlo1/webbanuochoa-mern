@@ -157,10 +157,10 @@ export const addProductReview = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newReview, rules, {
-        'required.title': 'Title Không được bỏ trống.',
+        'required.title': 'Tiêu đề Không được bỏ trống.',
         'required.review': 'Review Không được bỏ trống.',
-        'required.rating': 'Rating Không được bỏ trống.',
-        'min.rating': 'Rating Không được bỏ trống.',
+        'required.rating': 'Đánh giá Không được bỏ trống.',
+        'min.rating': 'Đánh giá Không được bỏ trống.',
         'required.isRecommended': 'Recommendable Không được bỏ trống.'
       });
 

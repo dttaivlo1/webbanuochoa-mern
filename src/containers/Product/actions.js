@@ -280,7 +280,7 @@ export const addProduct = () => {
         'required.description': 'Description Không được bỏ trống.',
         'max.description':
           'Description may not be greater than 200 characters.',
-        'required.quantity': 'Quantity Không được bỏ trống.',
+        'required.quantity': 'Số lượng Không được bỏ trống.',
         'required.price': 'Price Không được bỏ trống.',
         'required.taxable': 'Taxable Không được bỏ trống.',
         'required.image': 'Please upload files with jpg, jpeg, png format.',
@@ -369,7 +369,7 @@ export const updateProduct = () => {
         'required.description': 'Description Không được bỏ trống.',
         'max.description':
           'Description may not be greater than 200 characters.',
-        'required.quantity': 'Quantity Không được bỏ trống.',
+        'required.quantity': 'Số lượng Không được bỏ trống.',
         'required.price': 'Price Không được bỏ trống.',
         'required.taxable': 'Taxable Không được bỏ trống.',
         'required.brand': 'Brand Không được bỏ trống.'

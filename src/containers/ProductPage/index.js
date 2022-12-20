@@ -91,7 +91,7 @@ class ProductPage extends React.PureComponent {
                       <hr />
                       {product.brand && (
                         <p className='by'>
-                          see more from{' '}
+                          Xem thêm các sản phẩm đến từ: {' '}
                           <Link
                             to={`/shop/brand/${product.brand.slug}`}
                             className='default-link'
@@ -112,7 +112,7 @@ class ProductPage extends React.PureComponent {
                         decimals={false}
                         min={1}
                         max={product.inventory}
-                        placeholder={'Product Quantity'}
+                        placeholder={'Product Số lượng'}
                         disabled={
                           product.inventory <= 0 && !shopFormErrors['quantity']
                         }

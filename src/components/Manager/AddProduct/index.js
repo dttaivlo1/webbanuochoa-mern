@@ -84,7 +84,7 @@ const AddProduct = props => {
               label={'Số lượng'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'Product Số lượng'}
               value={productFormData.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);

@@ -107,7 +107,7 @@ const EditProduct = props => {
               label={'Số lượng'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'Product Số lượng'}
               value={product.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);

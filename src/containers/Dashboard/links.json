@@ -24,11 +24,11 @@
     { "to": "/support", "name": "Support" }
   ],
   "ROLE_MEMBER": [
-    { "to": "", "name": "Account Details", "prefix": "/dashboard" },
-    { "to": "/security", "name": "Account Security", "prefix": "/dashboard" },
-    { "to": "/address", "name": "Address", "prefix": "/dashboard" },
-    { "to": "/orders", "name": "Orders", "prefix": "/dashboard" },
-    { "to": "/wishlist", "name": "WishList", "prefix": "/dashboard" },
-    { "to": "/support", "name": "Support" }
+    { "to": "", "name": "Thông tin tài khoản ", "prefix": "/dashboard" },
+    { "to": "/security", "name": "Đổi mật khẩu", "prefix": "/dashboard" },
+    { "to": "/address", "name": "Địa chỉ của bạn", "prefix": "/dashboard" },
+    { "to": "/orders", "name": "Đơn hàng", "prefix": "/dashboard" },
+    { "to": "/wishlist", "name": "Danh sách yêu thích", "prefix": "/dashboard" },
+    { "to": "/support", "name": "Hỗ trợ" }
   ]
 }
